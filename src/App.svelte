@@ -390,6 +390,9 @@ const gotoWorkspace = async (event) => {
   const workspaceId=event.detail;
   //loadtrackers
   let payload = await setTrackableList(30);
+  if (payload.length ==0) {
+    payload.push(["⦰ Empty ","#dummy"]);
+  }
   trackablelist.set(payload);
 		
 		//find workspace by id

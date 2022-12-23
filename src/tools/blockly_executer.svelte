@@ -93,7 +93,7 @@
    // Add an API function for the prompt() block.
   var wrapper = function(text) {
     text = text ? text.toString() : '';
-    return prompt(text);
+    return prompt(text).valueOf();
   };
   interpreter.setProperty(globalObject, 'prompt',
       interpreter.createNativeFunction(wrapper));

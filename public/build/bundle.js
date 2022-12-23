@@ -39460,14 +39460,14 @@ var app = (function () {
             try {
               xhr.send();
               if (xhr.status != 200) {
-                callback(`Error ${xhr.status}: ${xhr.statusText}`);
+                callback((`Error ${xhr.status}: ${xhr.statusText}`).valueOf());
                 //return(`Error ${xhr.status}: ${xhr.statusText}`);
               } else {
-                callback(xhr.response);
+                callback((xhr.response).valueOf());
                 //return(xhr.response);
               }
             } catch(err) { // instead of onerror
-              callback("Request failed");
+              callback(("Request failed").valueOf());
               //return("Request failed");
             }
         }
@@ -40190,7 +40190,7 @@ var app = (function () {
             function(value,tracker,day, callback) { 
               logDailyTrackerValue(value,tracker,day)
             .then(function(value) {
-              callback(value);
+              callback((value).valueOf());
             });
           }
         );
@@ -40261,7 +40261,7 @@ var app = (function () {
             function(tracker,period,stats, callback) { 
               getPeriodTrackerValue(tracker,period,stats)
             .then(function(value) {
-              callback(value);
+              callback((value).valueOf());
             });
           }
         );
@@ -40332,7 +40332,7 @@ var app = (function () {
             function(tracker,day,stats, callback) { 
               getDailyTrackerValue(tracker,day,stats)
             .then(function(value) {
-              callback(value);
+              callback(value.valueOf());
             });
           }
         );
@@ -40411,7 +40411,7 @@ var app = (function () {
             function(tracker, callback) { 
             getValueLocal(tracker)
             .then(function(value) {
-              callback(value);
+              callback((value).valueOf());
             });
           }
         );
@@ -40530,7 +40530,7 @@ var app = (function () {
     	// Add an API function for the prompt() block.
     	var wrapper = function (text) {
     		text = text ? text.toString() : '';
-    		return prompt(text);
+    		return prompt(text).valueOf();
     	};
 
     	interpreter.setProperty(globalObject, 'prompt', interpreter.createNativeFunction(wrapper));

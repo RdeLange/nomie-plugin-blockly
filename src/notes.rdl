@@ -1,0 +1,6 @@
+Some notes related to the Blockly Plugin Development.
+
+1. Make sure to install js-interpreter 2.0.0
+    Higher versions will not work as the createprimitive function got depreciated
+    Make sure to npm istall everything with the  --legacy-peer-dep tag. Example: npm install js-interpreter@2.0.0 --legacy-peer-dep
+    This is needed as some of the Blockly code is legacy, specifically the date dropdown.

@@ -36,7 +36,7 @@
     "@blockly/theme-dark": "^2.0.7",
     "@joeattardi/emoji-button": "^4.6.4",
     "@rollup/plugin-json": "^4.1.0",
-    "blockly": "^5.20210325.1",
+    "blockly": "^9.2.0",
     "js-interpreter": "^2.2.0",
     "sass": "^1.32.8",
     "sirv-cli": "^1.0.0",

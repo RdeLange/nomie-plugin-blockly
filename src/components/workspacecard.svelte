@@ -41,7 +41,7 @@ const dispatch = createEventDispatcher();
   
   <span hidden>{workspace.id}</span>
   <div class="title">
-   <h3 style="text-align:center"><b>{workspace.emoji} {workspace.displayName}</b></h3>
+   <h5 style="text-align:center"><b>{workspace.emoji} {workspace.displayName}</b></h5>
   </div> 
   <div class="description">
       <p hidden>{workspace.description}</p>

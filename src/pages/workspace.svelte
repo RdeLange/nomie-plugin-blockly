@@ -263,7 +263,7 @@ if(res.value) {
 			    </div>
 				<div class="column" style="width:58%;">
 					<div style="display: grid; justify-content: center; align-content: center;">
-				<span><h4>{wsemoji} {wsname}</h4></span>
+				<span><h5>{wsemoji} {wsname}</h5></span>
 				</div>
 				</div>
 				<div class="column" style="width:20%;">

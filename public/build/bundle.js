@@ -1,5 +1,5 @@
 
-(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 var app = (function () {
     'use strict';
 
@@ -41334,12 +41334,12 @@ var app = (function () {
     			t5 = space();
     			hr = element("hr");
     			set_style(h1, "text-align", "center");
-    			add_location(h1, file, 714, 8, 25996);
+    			add_location(h1, file, 714, 8, 26002);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file, 715, 8, 26053);
+    			add_location(h2, file, 715, 8, 26059);
     			set_style(h5, "text-align", "center");
-    			add_location(h5, file, 716, 8, 26109);
-    			add_location(hr, file, 717, 8, 26179);
+    			add_location(h5, file, 716, 8, 26115);
+    			add_location(hr, file, 717, 8, 26185);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -42619,9 +42619,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Loading....";
-    			add_location(p, file, 721, 0, 26226);
+    			add_location(p, file, 721, 0, 26232);
     			attr_dev(div, "class", "startup");
-    			add_location(div, file, 720, 0, 26204);
+    			add_location(div, file, 720, 0, 26210);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -42681,7 +42681,7 @@ var app = (function () {
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "file-input");
     			attr_dev(input, "accept", ".wsp");
-    			add_location(input, file, 725, 0, 26268);
+    			add_location(input, file, 725, 0, 26274);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -43337,26 +43337,11 @@ var app = (function () {
     			$$invalidate(18, latestrun = newws[0].latestrun);
     			$$invalidate(19, schedule = newws[0].schedule);
 
-    			const workspace = {
-    				id,
-    				name,
-    				description,
-    				color,
-    				displayName,
-    				emoji,
-    				active,
-    				block,
-    				workspaceBlocks,
-    				workspacePosition,
-    				jscode,
-    				latestrun,
-    				schedule
-    			};
-
-    			blockly.workspaces.push(workspace);
-    			plugin.storage.setItem('blockly', blockly);
-    			amountofcards = blockly.workspaces.length;
+    			//blockly.workspaces.push(workspace);
+    			//plugin.storage.setItem('blockly', blockly);
+    			//amountofcards = blockly.workspaces.length;
     			$$invalidate(21, isAddMode = true);
+
     			$$invalidate(5, view = "mainedit");
     		});
 

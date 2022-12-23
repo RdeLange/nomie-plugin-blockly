@@ -531,9 +531,9 @@ function importFile(file) {
         latestrun: latestrun,
         schedule:schedule,
 			};
-			blockly.workspaces.push(workspace);
-      plugin.storage.setItem('blockly', blockly);
-      amountofcards = blockly.workspaces.length;
+			//blockly.workspaces.push(workspace);
+      //plugin.storage.setItem('blockly', blockly);
+      //amountofcards = blockly.workspaces.length;
 
         isAddMode = true;
        view = "mainedit";

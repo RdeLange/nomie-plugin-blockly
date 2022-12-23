@@ -31211,7 +31211,7 @@ var app = (function () {
     			div = element("div");
     			create_component(textarea.$$.fragment);
     			attr_dev(div, "class", "row svelte-16okgi0");
-    			add_location(div, file$2, 242, 4, 8515);
+    			add_location(div, file$2, 242, 4, 8523);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -31269,7 +31269,7 @@ var app = (function () {
     	let div3;
     	let div2;
     	let span1;
-    	let h5;
+    	let h6;
     	let t2;
     	let t3;
     	let t4;
@@ -31337,7 +31337,7 @@ var app = (function () {
     			div3 = element("div");
     			div2 = element("div");
     			span1 = element("span");
-    			h5 = element("h5");
+    			h6 = element("h6");
     			t2 = text(/*wsemoji*/ ctx[1]);
     			t3 = space();
     			t4 = text(/*wsname*/ ctx[2]);
@@ -31358,22 +31358,23 @@ var app = (function () {
     			attr_dev(div1, "class", "column svelte-16okgi0");
     			set_style(div1, "width", "20%");
     			add_location(div1, file$2, 219, 5, 7504);
-    			add_location(h5, file$2, 231, 10, 8105);
-    			add_location(span1, file$2, 231, 4, 8099);
-    			set_style(div2, "display", "grid");
-    			set_style(div2, "justify-content", "center");
-    			set_style(div2, "align-content", "center");
-    			add_location(div2, file$2, 230, 5, 8018);
+    			add_location(h6, file$2, 231, 10, 8113);
+    			add_location(span1, file$2, 231, 4, 8107);
+    			add_location(div2, file$2, 230, 5, 8097);
     			attr_dev(div3, "class", "column svelte-16okgi0");
-    			set_style(div3, "width", "58%");
+    			set_style(div3, "grid-auto-flow", "column");
+    			set_style(div3, "width", "50%");
+    			set_style(div3, "display", "grid");
+    			set_style(div3, "align-items", "center");
+    			set_style(div3, "justify-items", "center");
     			add_location(div3, file$2, 229, 4, 7973);
-    			add_location(span2, file$2, 237, 4, 8366);
+    			add_location(span2, file$2, 237, 4, 8374);
     			set_style(div4, "justify-content", "flex-end");
     			set_style(div4, "display", "flex");
-    			add_location(div4, file$2, 235, 5, 8211);
+    			add_location(div4, file$2, 235, 5, 8219);
     			attr_dev(div5, "class", "column svelte-16okgi0");
-    			set_style(div5, "width", "20%");
-    			add_location(div5, file$2, 234, 4, 8166);
+    			set_style(div5, "width", "30%");
+    			add_location(div5, file$2, 234, 4, 8174);
     			attr_dev(div6, "class", "row svelte-16okgi0");
     			add_location(div6, file$2, 218, 4, 7481);
     		},
@@ -31389,10 +31390,10 @@ var app = (function () {
     			append_dev(div6, div3);
     			append_dev(div3, div2);
     			append_dev(div2, span1);
-    			append_dev(span1, h5);
-    			append_dev(h5, t2);
-    			append_dev(h5, t3);
-    			append_dev(h5, t4);
+    			append_dev(span1, h6);
+    			append_dev(h6, t2);
+    			append_dev(h6, t3);
+    			append_dev(h6, t4);
     			append_dev(div6, t5);
     			append_dev(div6, div5);
     			append_dev(div5, div4);

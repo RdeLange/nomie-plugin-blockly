@@ -261,12 +261,12 @@ if(res.value) {
 				{/if}
 			    </div>
 			    </div>
-				<div class="column" style="width:58%;">
-					<div style="display: grid; justify-content: center; align-content: center;">
-				<span><h5>{wsemoji} {wsname}</h5></span>
+				<div class="column" style="grid-auto-flow: column;width:50%; display:grid; align-items:center; justify-items:center;">
+					<div>
+				<span><h6>{wsemoji} {wsname}</h6></span>
 				</div>
 				</div>
-				<div class="column" style="width:20%;">
+				<div class="column" style="width:30%;">
 					<div style="justify-content: flex-end;  display: flex;">
 				<Filemanager bind:Workspaces={workspaces} on:uploadws={(e)=>{uploadWS(e)}}></Filemanager>
 				<span on:click={()=>{executeCode()}}><Play size={32} style="cursor: pointer;"/></span>

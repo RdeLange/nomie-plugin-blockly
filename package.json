@@ -37,7 +37,7 @@
     "@joeattardi/emoji-button": "^4.6.4",
     "@rollup/plugin-json": "^4.1.0",
     "blockly": "^5.20210325.1",
-    "js-interpreter": "^2.3.1",
+    "js-interpreter": "^2.3.0",
     "sass": "^1.32.8",
     "sirv-cli": "^1.0.0",
     "svelte-blockly": "^0.1.0",

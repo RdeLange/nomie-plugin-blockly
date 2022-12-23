@@ -4,3 +4,6 @@ Some notes related to the Blockly Plugin Development.
     Higher versions will not work as the createprimitive function got depreciated
     Make sure to npm istall everything with the  --legacy-peer-dep tag. Example: npm install js-interpreter@2.0.0 --legacy-peer-dep
     This is needed as some of the Blockly code is legacy, specifically the date dropdown.
+
+2. When deploying to Netlify, make sure to define a variable in the environment variable section.
+    The variable is called NPM_FLAGS and the value should be set to --legacy-peer-dep

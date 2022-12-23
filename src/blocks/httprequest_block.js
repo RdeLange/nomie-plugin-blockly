@@ -58,14 +58,14 @@ import Blockly from 'blockly/core.js';
         try {
           xhr.send();
           if (xhr.status != 200) {
-            callback((`Error ${xhr.status}: ${xhr.statusText}`).valueOf());
+            callback(interpreter.createPrimitive(`Error ${xhr.status}: ${xhr.statusText}`));
             //return(`Error ${xhr.status}: ${xhr.statusText}`);
           } else {
-            callback((xhr.response).valueOf());
+            callback(interpreter.createPrimitive(xhr.response));
             //return(xhr.response);
           }
         } catch(err) { // instead of onerror
-          callback(("Request failed").valueOf());
+          callback(interpreter.createPrimitive("Request failed"));
           //return("Request failed");
         }
     }

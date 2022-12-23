@@ -66,7 +66,7 @@ import { logDailyTrackerValue } from '../tools/blockly_functions.svelte';
         function(value,tracker,day, callback) { 
           logDailyTrackerValue(value,tracker,day)
         .then(function(value) {
-          callback((value).valueOf());
+          callback(interpreter.createPrimitive(value));
         })
       }
     );

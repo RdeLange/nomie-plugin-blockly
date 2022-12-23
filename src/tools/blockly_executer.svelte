@@ -79,7 +79,7 @@
   // Add an API function for highlighting blocks.
   var wrapper = function(id) {
     id = id ? id.toString() : '';
-    return interpreter.createPrimitive(highlightBlock(id));
+    return highlightBlock(id);
   };
   interpreter.setProperty(globalObject, 'highlightBlock',
       interpreter.createNativeFunction(wrapper));
@@ -93,7 +93,7 @@
    // Add an API function for the prompt() block.
   var wrapper = function(text) {
     text = text ? text.toString() : '';
-    return interpreter.createPrimitive(prompt(text));
+    return prompt(text);
   };
   interpreter.setProperty(globalObject, 'prompt',
       interpreter.createNativeFunction(wrapper));

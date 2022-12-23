@@ -39460,14 +39460,14 @@ var app = (function () {
             try {
               xhr.send();
               if (xhr.status != 200) {
-                callback(interpreter.createPrimitive(`Error ${xhr.status}: ${xhr.statusText}`));
+                callback(`Error ${xhr.status}: ${xhr.statusText}`);
                 //return(`Error ${xhr.status}: ${xhr.statusText}`);
               } else {
-                callback(interpreter.createPrimitive(xhr.response));
+                callback(xhr.response);
                 //return(xhr.response);
               }
             } catch(err) { // instead of onerror
-              callback(interpreter.createPrimitive("Request failed"));
+              callback("Request failed");
               //return("Request failed");
             }
         }
@@ -40190,7 +40190,7 @@ var app = (function () {
             function(value,tracker,day, callback) { 
               logDailyTrackerValue(value,tracker,day)
             .then(function(value) {
-              callback(interpreter.createPrimitive(value));
+              callback(value);
             });
           }
         );
@@ -40261,7 +40261,7 @@ var app = (function () {
             function(tracker,period,stats, callback) { 
               getPeriodTrackerValue(tracker,period,stats)
             .then(function(value) {
-              callback(interpreter.createPrimitive(value));
+              callback(value);
             });
           }
         );
@@ -40332,7 +40332,7 @@ var app = (function () {
             function(tracker,day,stats, callback) { 
               getDailyTrackerValue(tracker,day,stats)
             .then(function(value) {
-              callback(interpreter.createPrimitive(value));
+              callback(value);
             });
           }
         );
@@ -40411,7 +40411,7 @@ var app = (function () {
             function(tracker, callback) { 
             getValueLocal(tracker)
             .then(function(value) {
-              callback(interpreter.createPrimitive(value));
+              callback(value);
             });
           }
         );
@@ -40516,7 +40516,7 @@ var app = (function () {
     	// Add an API function for highlighting blocks.
     	var wrapper = function (id) {
     		id = id ? id.toString() : '';
-    		return interpreter.createPrimitive(highlightBlock(id));
+    		return highlightBlock(id);
     	};
 
     	interpreter.setProperty(globalObject, 'highlightBlock', interpreter.createNativeFunction(wrapper));
@@ -40530,7 +40530,7 @@ var app = (function () {
     	// Add an API function for the prompt() block.
     	var wrapper = function (text) {
     		text = text ? text.toString() : '';
-    		return interpreter.createPrimitive(prompt(text));
+    		return prompt(text);
     	};
 
     	interpreter.setProperty(globalObject, 'prompt', interpreter.createNativeFunction(wrapper));

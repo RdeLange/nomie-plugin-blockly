@@ -67,7 +67,7 @@ import { getValueLocal } from '../tools/localfunction.svelte';
         function(tracker, callback) { 
         getValueLocal(tracker)
         .then(function(value) {
-          callback(interpreter.createPrimitive(value));
+          callback(value);
         })
       }
     );

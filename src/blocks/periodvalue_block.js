@@ -64,7 +64,7 @@ import { getPeriodTrackerValue } from '../tools/blockly_functions.svelte';
         function(tracker,period,stats, callback) { 
           getPeriodTrackerValue(tracker,period,stats)
         .then(function(value) {
-          callback(interpreter.createPrimitive(value));
+          callback(value);
         })
       }
     );

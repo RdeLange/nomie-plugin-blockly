@@ -18,23 +18,7 @@
     export let centralscheduleslist;
     export let workspaces;
 
-    const availableitems = [
-		{
-			emoji: "📆",
-			url: 'https://plugins.nomie.app/v1/plugins/my-people/',
-			title: 'Run Schedule',
-			subtitle: 'Manually Run the Scheduler',
-			text: 'tbd'
-		},
-		{
-			emoji: "📑",
-			url: 'https://plugins.nomie.app/v1/plugins/meditate/',
-			title: 'Get Schedule Logs',
-			subtitle: 'Show an overview of all schedules executed',
-			text: 'tbd'
-		}]
-
-
+   
     if (theme == "g90"){
     document.documentElement.style.setProperty('--date-picker-background', "#4A4A4B");
     document.documentElement.style.setProperty('--date-picker-foreground', "#f7f7f7");

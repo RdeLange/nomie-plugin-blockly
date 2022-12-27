@@ -717,7 +717,7 @@ if(res.value) {
 {:else if !inNomie}
         <h1 style="text-align:center">{pluginemoji}</h1>
         <h2 style="text-align:center">{pluginname}</h2>
-        <h5 style="text-align:center">This is a plugin for Nomie</h5>
+        <h5 style="text-align:center">This is a plugin for {parent}</h5>
         <hr>
 {/if}
 {#if loading}

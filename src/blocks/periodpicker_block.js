@@ -38,6 +38,10 @@ Blockly.defineBlocksWithJsonArray([
             "LAST30DAYS"
           ],
           [
+            "Last 60 Days",
+            "LAST60DAYS"
+          ],
+          [
             "Last 90 Days",
             "LAST90DAYS"
           ]

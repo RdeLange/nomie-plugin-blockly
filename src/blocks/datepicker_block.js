@@ -20,7 +20,7 @@ import Interpreter from 'js-interpreter';
         {
             "type": "field_date",
             "name": "Date",
-            "date": "2021-08-02"
+            "date": new Date().toISOString().slice(0, 10),
         }
     ],
     "inputsInline": false,

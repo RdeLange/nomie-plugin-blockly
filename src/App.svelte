@@ -237,7 +237,7 @@ return PreLoadedList;
       if (loading) {
         inNomie = false;
       }
-    }, 4000);
+    }, 400);
     
   }
 

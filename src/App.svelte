@@ -697,7 +697,7 @@ function onLoaded() {
 //        addToWidgets: true,
 //    })
   }
-},4000)
+},2000)
 }
 
 // FILE MANAGEMENT END

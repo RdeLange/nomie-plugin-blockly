@@ -682,9 +682,7 @@ if(res.value) {
 }
 
 function onLoaded() {
-  loaded = true;
-  console.log("Loaded is true");
-  if (!plugin) {
+  if (plugin.prefs == undefined) {
   plugin = new NomiePlugin({
         name: pluginname,
         emoji: pluginemoji,

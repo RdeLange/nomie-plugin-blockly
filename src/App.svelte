@@ -682,6 +682,7 @@ if(res.value) {
 }
 
 function onLoaded() {
+  setTimeout(()=>{
   if (plugin.prefs == undefined) {
     window.location.reload();
  // plugin = new NomiePlugin({
@@ -696,6 +697,7 @@ function onLoaded() {
 //        addToWidgets: true,
 //    })
   }
+},4000)
 }
 
 // FILE MANAGEMENT END

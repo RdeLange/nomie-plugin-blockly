@@ -1,5 +1,6 @@
 <script>
   import { onMount } from 'svelte';
+  import LibLoader from './components/LibLoadder.svelte';
   import { globalplugin , trackablelist } from './store/stores';
   import {notifications} from './components/notifications.js'
 	import Toast from './components/toast.svelte'
@@ -41,23 +42,14 @@
   const pluginemoji = "🧱";
   var parent = "";
   
-  const plugin = new NomiePlugin({
-        name: pluginname,
-        emoji: pluginemoji,
-        avatar: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAC0ALQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDZooooAKKRmCjLHAqA3sIPBJ+gppN7CbSLFFVvt0Xo35UfbovRvyp8kuwcyLNFVvt0Xo35UfbovRvyo5Jdg5kWaKrfbovRvyo+3RejflRyS7BzIs0VW+3RejflR9ui9G/Kjkl2DmRZoqNZlYAgHml81fepGPopnmr70eavvQA+imeavvR5q+9AD6KZ5q+9PBB6GgAooooAKKKKACiig9DQBmXUxkkIz8o6CoaD1P1orsSsrGDdwooooEFFFFABRRRQAUlLSUAX4/8AVr9KdTY/9Wv0p1cr3N0FFFFIAooooAKVWKnIpKKALIORmikT7g+lLSGFFFFABQehooPQ0AYx6n60UHqfrRXYc4UUUUAFFFFABRRRQAUlLSUAX4/9Wv0p1Nj/ANWv0p1cr3N0FFFFIAooooAKKKKALCfcH0paRPuD6UtIYUUUUAFB6Gig9DQBjHqfrRQep+tFdhzhRRRQAUUUUAFFFOEbldwU4ouA2kpaSgC/H/q1+lOpsf8Aq1+lOrle5ugooopAFFFFABRRRQBYT7g+lLSJ9wfSlpDCiiigAoPQ0UHoaAMY9T9aKD1P1orsOcKKKKACiiigAq+v3R9KoVfHQfSsqvQuAySFX56H1qtJEydRketXaKiM2inFMbH/AKtfpTqBwMCipZQUUUUgCiiigAooooAsJ9wfSlpE+4PpS0hhRRRQAUHoaKD0NAGMep+tFB6n60V2HOFFFFABRRRQAVfHQfSqFXx0H0rKr0LgLRRRWJoFFFFABRRRQAUUUUAFFFFAFhPuD6UtIn3B9KWkMKKKKACg9DRQehoAxj1P1ooPU/Wiuw5wooooAKKKKACr46D6VQq+Og+lZVehcBaKQkKMk4FQSXHZPzrNRb2LbSLFFNQ5RSfSnUhhRRRSAKKKKACiiigCwn3B9KWkT7g+lLSGFFFFABQehooPQ0AYx6n60UHqfrRXYc4UUUUAFFFFABUwuSExt59ahopNJ7jTaFd2c5Y5ptLSUxF+P/Vr9KdTY/8AVr9KdXK9zdBRRRSAKKKKACiiigCwn3B9KWkT7g+lLSGFFFFABQehooPQ0AYx6n60UHqfrRXYc4UUUUAFFFFABRRRQAUlLSUAX4/9Wv0p1Nj/ANWv0p1cr3N0FFFFIAooooAKKKKALCfcH0paRPuD6UtIYUUUUAFB6UUUAY7gq7A9jSVoXNr5h3p9709apGGVTgo35V1RkmjFxaGUUFSpwwI+tFUSFFFFABRRQAScAZNABSU/ypP7jflR5Un9xvyougsXI/8AVr9KdSRqRGoIPSnbT6GuV7m6Eopdp9DRtPoaQCUUu0+ho2n0NACUUu1vQ09IznLUASLwo+lLRRSGFFFFABRRRQAUUUUAVb6IugdRyvX6VQrZqnPZ5JaL8q2pztozOUeqKVFOaN0PzIw/CkCM3RWP0FbXMxKt2MRLGQjgcCkhs2YgycD071fACgADAFZTmrWRpGPVhRRRWBoFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFGBRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z",
-        description: "Blockly Plugin for creating your own simple automations",
-        uses: ['createNote', 'onLaunch', 'getLocation', 'searchNotes', 'onNote'],
-        version: "0.9",
-        addToCaptureMenu: true,
-        addToMoreMenu: true,
-        addToWidgets: true,
-      }); 
+  
   let inNomie = false;
   let isSideNavOpen = false;
   let theme = "g10";
   let mode = "hidden";
   let loading = true;
   let view = "main";
+  let loaded = false;
 
   // BLOCKY PLUGIN VARIABLES DECLARATION START
   
@@ -76,10 +68,25 @@
     let latestrun= new Date().toDateString();
     let schedule="";
     let amountofcards = 0;
-
+    let plugin;
     let isEditMode = false;
     let isAddMode = false;
     let consoleoutput = "";
+    let PlugiAapiUrl = "https://plugins.nomie.app/v1/nomie-plugin.js";
+
+    
+    plugin = new NomiePlugin({
+        name: pluginname,
+        emoji: pluginemoji,
+        avatar: "data:image/jpeg;base64,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",
+        description: "Blockly Plugin for creating your own simple automations",
+        uses: ['createNote', 'onLaunch', 'getLocation', 'searchNotes', 'onNote'],
+        version: "0.9",
+        addToCaptureMenu: true,
+        addToMoreMenu: true,
+        addToWidgets: true,
+      })
+      
     
     SingleExecuterConsole.subscribe(value => {
 		consoleoutput = value;
@@ -240,6 +247,8 @@ return PreLoadedList;
     }, 400);
     
   }
+
+  
 
   // change theme
   function toggleTheme(){
@@ -462,7 +471,6 @@ const editworkspace = (id, newName, newdisplayName, newEmoji,newDescription, new
   let newws = null;
   newws = await LoadFile();
   var awaitresult = setInterval(function() {
-    console.log("check");
     if (newws) {
       id=  nid();
 				name = newws[0].name ;
@@ -673,14 +681,35 @@ if(res.value) {
 
 }
 
+function onLoaded() {
+  loaded = true;
+  console.log("Loaded is true");
+  if (!plugin) {
+  plugin = new NomiePlugin({
+        name: pluginname,
+        emoji: pluginemoji,
+        avatar: "data:image/jpeg;base64,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",
+        description: "Blockly Plugin for creating your own simple automations",
+        uses: ['createNote', 'onLaunch', 'getLocation', 'searchNotes', 'onNote'],
+        version: "0.9",
+        addToCaptureMenu: true,
+        addToMoreMenu: true,
+        addToWidgets: true,
+      })
+  }
+}
+
 // FILE MANAGEMENT END
 
  onMount(async () => {
   loadInitParams();
+  
  })
 
 </script>
 
+<LibLoader url={PlugiAapiUrl}
+on:loaded="{onLoaded}" />
 
 {#if mode == "modal"  || mode =="widget"}
 <Theme bind:theme />

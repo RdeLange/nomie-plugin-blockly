@@ -5,8 +5,6 @@
   export let workspaces;
   export let lastcentralschedule = "01-01-1999";
   var countschedule =0;
-  let lastschedule = new Date(lastcentralschedule).toISOString();
-  console.log(lastschedule);
 
   workspaces.forEach(element => {
     if (element.jscode.includes('s4eblocklyframe = "activated"') && !element.jscode.includes('var schedule = "none"')){
@@ -15,7 +13,7 @@
   });
 
   //let lastrun = new Date(lastcentralschedule).toISOString.slice(0, 10);
-	let lastrun = new Date(lastcentralschedule);
+	let lastrun = new Date(lastcentralschedule).toISOString();
 	
 	let slides = [
 		{ content: 'Last Schedule', sub: lastrun ,bg: '#E77761' },

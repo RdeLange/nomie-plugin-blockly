@@ -2,11 +2,11 @@
 <script>
 	import { hslide } from './hslide.js';
 
-  export let pluginname;
-  export let pluginemoji;
   export let workspaces;
   export let lastcentralschedule = "01-01-1999";
   var countschedule =0;
+  let lastschedule = new Date(lastcentralschedule).toISOString();
+  console.log(lastschedule);
 
   workspaces.forEach(element => {
     if (element.jscode.includes('s4eblocklyframe = "activated"') && !element.jscode.includes('var schedule = "none"')){

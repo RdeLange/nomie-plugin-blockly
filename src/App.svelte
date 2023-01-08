@@ -38,7 +38,7 @@
 		executionrunning = value;
 	});
   
-  const pluginname = "Blockly Plugin";
+  const pluginname = "Nomie Blockly";
   const pluginemoji = "🧱";
   var parent = "";
   

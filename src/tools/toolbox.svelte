@@ -315,7 +315,7 @@ export const ntoolbox = (parent) => {return {
             ...(undefined as Blockly.utils.toolbox.StaticCategoryInfo),
             kind: 'category',
             name: parent,
-            colour: 'E77761',
+            colour: '0AB3F5',
             contents: [
 				{
                     ...(undefined as Blockly.utils.toolbox.BlockInfo),

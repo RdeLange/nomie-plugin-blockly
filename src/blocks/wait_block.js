@@ -28,7 +28,7 @@ Blockly.defineBlocksWithJsonArray([{
   }],
   "previousStatement": null,
   "nextStatement": null,
-  "colour": "f96e5b"
+  "colour": "86D8F9"
 }]);
 
 /**

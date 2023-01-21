@@ -49,7 +49,7 @@ Blockly.defineBlocksWithJsonArray([
       }
     ],
     "output": "Period",
-    "colour": 'E77761',
+    "colour": '0AB3F5',
     "tooltip": "",
     "helpUrl": ""
   }]);

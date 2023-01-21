@@ -37,7 +37,7 @@ import { getPeriodTrackerValue } from '../tools/blockly_functions.svelte';
     }
   ],
   "output": "Number",
-  "colour": 'E77761',
+  "colour": '0AB3F5',
   "tooltip": "",
   "helpUrl": ""
 }]);

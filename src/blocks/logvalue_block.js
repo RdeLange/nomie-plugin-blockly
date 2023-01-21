@@ -38,7 +38,7 @@ import { logDailyTrackerValue } from '../tools/blockly_functions.svelte';
   ],
   "inputsInline": false,
   "output": null,
-  "colour": 'E77761',
+  "colour": '0AB3F5',
   "tooltip": "",
   "helpUrl": ""
 }]);

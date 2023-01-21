@@ -62,7 +62,7 @@
    var wrapper = function(text) {
     text = text ? text.toString() : '';
 	consoleoutput = consoleoutput + '\n' + text;
-  ExecuterConsole.update(value => value = value + '\n' + text);
+  SingleExecuterConsole.update(value => value = value + '\n' + text);
   //SingleExecuterConsole.update(value => value = value + '\n' + text);
   };
   interpreter.setProperty(globalObject, 'alert',

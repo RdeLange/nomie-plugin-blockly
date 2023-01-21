@@ -26,7 +26,7 @@ import Blockly from 'blockly/core.js';
   ],
   "inputsInline": false,
   "output": null,
-  "colour": 'E77761',
+  "colour": '0AB3F5',
   "tooltip": "",
   "helpUrl": ""
 }]);

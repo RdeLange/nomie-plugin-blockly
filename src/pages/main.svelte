@@ -61,7 +61,7 @@
           {#if workspaces.length === 0}
           <Tile>
             <p class="no-workspaces">
-              No Blockly Workspaces? Oh dear, please add one to start practicing. 
+              No Blockly Workspaces? Oh dear, please add one to start coding. 
             </p>
             
           </Tile>

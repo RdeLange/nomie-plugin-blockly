@@ -44,7 +44,7 @@ Blockly.defineBlocksWithJsonArray([
       }
     ],
     "output": "Statistics",
-    "colour": 'E77761',
+    "colour": '0AB3F5',
     "tooltip": "",
     "helpUrl": ""
   }]);

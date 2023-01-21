@@ -15156,13 +15156,13 @@ var app = (function () {
             id: "",
             active: true,
             block: "",
-            workspaceBlocks: "<xml xmlns=\"https://developers.google.com/blockly/xml\">\n  <variables>\n    <variable id=\"Mll_ehocPKpl*,j99rDv\">UVI</variable>\n    <variable id=\"%+R/Rg-V|tiC9f7#LU)O\">Value</variable>\n  </variables>\n  <block type=\"s4eblocklyframe\" id=\"2gL!0USa-$;~A}l9%ObA\" x=\"-550\" y=\"-450\">\n    <field name=\"NAME\">none</field>\n    <statement name=\"script\">\n      <block type=\"variables_set\" id=\"D,_9OcF,J0fd3mO*n:XW\">\n        <field name=\"VAR\" id=\"Mll_ehocPKpl*,j99rDv\">UVI</field>\n        <value name=\"VALUE\">\n          <block type=\"s4e_httprequest\" id=\"(,K~=?lJHyU4KtKU;3Xv\">\n            <value name=\"Value\">\n              <block type=\"text\" id=\"4#Dg15T(!zz/rP~V-ouA\">\n                <field name=\"TEXT\">https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&amp;APPID=171afc4ace2796c30471c8a140f31231&amp;lang=fr&amp;units=metric</field>\n              </block>\n            </value>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" id=\"RN/on=49vX][VL*xb.I=\">\n            <field name=\"VAR\" id=\"%+R/Rg-V|tiC9f7#LU)O\">Value</field>\n            <value name=\"VALUE\">\n              <block type=\"value_from_json_key\" id=\"XJThhg_(RW.4+L+UI[T^\">\n                <value name=\"Key\">\n                  <block type=\"text\" id=\"MfFKirn/Fe)$Kg#=^53)\">\n                    <field name=\"TEXT\">temp</field>\n                  </block>\n                </value>\n                <value name=\"JSON object\">\n                  <block type=\"value_from_json_key\" id=\"JY]1Xxb*t!d1m18[8s8m\">\n                    <value name=\"Key\">\n                      <block type=\"text\" id=\"6a:y[#B%=*A3C]T`c}6s\">\n                        <field name=\"TEXT\">main</field>\n                      </block>\n                    </value>\n                    <value name=\"JSON object\">\n                      <block type=\"object_from_json\" id=\"J0qzls@i|QbhugCk3Heg\">\n                        <value name=\"JSON\">\n                          <shadow type=\"text\">\n                            <field name=\"TEXT\"></field>\n                          </shadow>\n                          <block type=\"variables_get\" id=\"`E`aft%Tx_j/sYWlXj^g\">\n                            <field name=\"VAR\" id=\"Mll_ehocPKpl*,j99rDv\">UVI</field>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <next>\n              <block type=\"pushto_webconsole\" id=\"+d5L=OvH|3R3^QZ0.81s\">\n                <value name=\"Value\">\n                  <block type=\"variables_get\" id=\"rpa[TDS8w;I1]/ooKY?{\">\n                    <field name=\"VAR\" id=\"%+R/Rg-V|tiC9f7#LU)O\">Value</field>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"display\" id=\"6jAJsn^y)9B./h6|2j{7\">\n                    <value name=\"Value\">\n                      <block type=\"text_join\" id=\"n63S.D)}Ka]1Vlzc~fE?\" inline=\"true\">\n                        <mutation items=\"2\"></mutation>\n                        <value name=\"ADD0\">\n                          <block type=\"text_join\" id=\"[SCP02QRlNXQ)ml}.me:\" inline=\"true\">\n                            <mutation items=\"2\"></mutation>\n                            <value name=\"ADD0\">\n                              <block type=\"text\" id=\"D}+NEjUV$*XH2,IhUqAW\">\n                                <field name=\"TEXT\">The temperature in Amsterdam is </field>\n                              </block>\n                            </value>\n                            <value name=\"ADD1\">\n                              <block type=\"variables_get\" id=\"X/ze=sVkT)389=$[v{D@\">\n                                <field name=\"VAR\" id=\"%+R/Rg-V|tiC9f7#LU)O\">Value</field>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <value name=\"ADD1\">\n                          <block type=\"text\" id=\"wBs[CMqSW-QI-hCYFRoi\">\n                            <field name=\"TEXT\"> degrees</field>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>",
+            workspaceBlocks: "<xml xmlns=\"https://developers.google.com/blockly/xml\">\n  <variables>\n    <variable id=\"GCAb(iIaPrw|u76g~dRv\">WeatherData</variable>\n    <variable id=\"%+R/Rg-V|tiC9f7#LU)O\">Temperature</variable>\n  </variables>\n  <block type=\"s4eblocklyframe\" id=\"2gL!0USa-$;~A}l9%ObA\" x=\"-550\" y=\"-450\">\n    <field name=\"NAME\">none</field>\n    <statement name=\"script\">\n      <block type=\"variables_set\" id=\"D,_9OcF,J0fd3mO*n:XW\">\n        <field name=\"VAR\" id=\"GCAb(iIaPrw|u76g~dRv\">WeatherData</field>\n        <value name=\"VALUE\">\n          <block type=\"s4e_httprequest\" id=\"(,K~=?lJHyU4KtKU;3Xv\">\n            <value name=\"Value\">\n              <block type=\"text\" id=\"4#Dg15T(!zz/rP~V-ouA\">\n                <field name=\"TEXT\">https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&amp;APPID=171afc4ace2796c30471c8a140f31231&amp;lang=fr&amp;units=metric</field>\n              </block>\n            </value>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" id=\"RN/on=49vX][VL*xb.I=\">\n            <field name=\"VAR\" id=\"%+R/Rg-V|tiC9f7#LU)O\">Temperature</field>\n            <value name=\"VALUE\">\n              <block type=\"value_from_json_key\" id=\"XJThhg_(RW.4+L+UI[T^\">\n                <value name=\"Key\">\n                  <block type=\"text\" id=\"MfFKirn/Fe)$Kg#=^53)\">\n                    <field name=\"TEXT\">temp</field>\n                  </block>\n                </value>\n                <value name=\"JSON object\">\n                  <block type=\"value_from_json_key\" id=\"JY]1Xxb*t!d1m18[8s8m\">\n                    <value name=\"Key\">\n                      <block type=\"text\" id=\"6a:y[#B%=*A3C]T`c}6s\">\n                        <field name=\"TEXT\">main</field>\n                      </block>\n                    </value>\n                    <value name=\"JSON object\">\n                      <block type=\"object_from_json\" id=\"J0qzls@i|QbhugCk3Heg\">\n                        <value name=\"JSON\">\n                          <shadow type=\"text\">\n                            <field name=\"TEXT\"></field>\n                          </shadow>\n                          <block type=\"variables_get\" id=\"`E`aft%Tx_j/sYWlXj^g\">\n                            <field name=\"VAR\" id=\"GCAb(iIaPrw|u76g~dRv\">WeatherData</field>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n              </block>\n            </value>\n            <next>\n              <block type=\"pushto_webconsole\" id=\"+d5L=OvH|3R3^QZ0.81s\">\n                <value name=\"Value\">\n                  <block type=\"variables_get\" id=\"rpa[TDS8w;I1]/ooKY?{\">\n                    <field name=\"VAR\" id=\"%+R/Rg-V|tiC9f7#LU)O\">Temperature</field>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"display\" id=\"6jAJsn^y)9B./h6|2j{7\">\n                    <value name=\"Value\">\n                      <block type=\"text_join\" id=\"n63S.D)}Ka]1Vlzc~fE?\" inline=\"true\">\n                        <mutation items=\"2\"></mutation>\n                        <value name=\"ADD0\">\n                          <block type=\"text_join\" id=\"[SCP02QRlNXQ)ml}.me:\" inline=\"true\">\n                            <mutation items=\"2\"></mutation>\n                            <value name=\"ADD0\">\n                              <block type=\"text\" id=\"D}+NEjUV$*XH2,IhUqAW\">\n                                <field name=\"TEXT\">The temperature in Amsterdam is </field>\n                              </block>\n                            </value>\n                            <value name=\"ADD1\">\n                              <block type=\"variables_get\" id=\"X/ze=sVkT)389=$[v{D@\">\n                                <field name=\"VAR\" id=\"%+R/Rg-V|tiC9f7#LU)O\">Temperature</field>\n                              </block>\n                            </value>\n                          </block>\n                        </value>\n                        <value name=\"ADD1\">\n                          <block type=\"text\" id=\"wBs[CMqSW-QI-hCYFRoi\">\n                            <field name=\"TEXT\"> degrees</field>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </statement>\n  </block>\n</xml>",
             workspacePosition: {
                 "scrollX": 264.63006591796875,
                 "scrollY": 233.31256103515625,
                 "scale": 0.45947426705971206
             },
-            jscode: "var UVI, Value;\n\n\nhighlightBlock('2gL!0USa-$;~A}l9%ObA');\ns4eblocklyframe = \"activated\";\nvar schedule = \"none\";\nif (schedule == \"daily\") {\nvar scheduler = scheduler_activated();\nvar schedulerstart = scheduler_start();\nvar schedulerend = scheduler_end();\n}\nelse {var scheduler = false;\nvar schedulerstart = new Date();\nvar schedulerend = new Date();}\nvar loop = new Date(schedulerstart);\nwhile(loop <= schedulerend){\n  highlightBlock('D,_9OcF,J0fd3mO*n:XW');\n  UVI = (httpRequest('https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=171afc4ace2796c30471c8a140f31231&lang=fr&units=metric'));\n  highlightBlock('RN/on=49vX][VL*xb.I=');\n  Value = (((JSON.parse(UVI))['main'])['temp']);\n  highlightBlock('+d5L=OvH|3R3^QZ0.81s');\n  consolelog(Value);\n  highlightBlock('6jAJsn^y)9B./h6|2j{7');\n  display((String('The temperature in Amsterdam is ' + String(Value)) + ' degrees'));var newDate = loop.setDate(loop.getDate() + 1);\nloop = new Date(newDate);}\n",
+            jscode: "var WeatherData, Temperature;\n\n\nhighlightBlock('2gL!0USa-$;~A}l9%ObA');\ns4eblocklyframe = \"activated\";\nvar schedule = \"none\";\nif (schedule == \"daily\") {\nvar scheduler = scheduler_activated();\nvar schedulerstart = scheduler_start();\nvar schedulerend = scheduler_end();\n}\nelse {var scheduler = false;\nvar schedulerstart = new Date();\nvar schedulerend = new Date();}\nvar loop = new Date(schedulerstart);\nwhile(loop <= schedulerend){\n  highlightBlock('D,_9OcF,J0fd3mO*n:XW');\n  WeatherData = (httpRequest('https://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=171afc4ace2796c30471c8a140f31231&lang=fr&units=metric'));\n  highlightBlock('RN/on=49vX][VL*xb.I=');\n  Temperature = (((JSON.parse(WeatherData))['main'])['temp']);\n  highlightBlock('+d5L=OvH|3R3^QZ0.81s');\n  consolelog(Temperature);\n  highlightBlock('6jAJsn^y)9B./h6|2j{7');\n  display((String('The temperature in Amsterdam is ' + String(Temperature)) + ' degrees'));var newDate = loop.setDate(loop.getDate() + 1);\nloop = new Date(newDate);}\n",
             latestrun: "",
             schedule: "daily"
         }
@@ -15880,7 +15880,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			p = element("p");
-    			p.textContent = "No Blockly Workspaces? Oh dear, please add one to start practicing.";
+    			p.textContent = "No Blockly Workspaces? Oh dear, please add one to start coding.";
     			attr_dev(p, "class", "no-workspaces svelte-k0r78j");
     			add_location(p, file$j, 62, 12, 1327);
     		},
@@ -23013,7 +23013,7 @@ var app = (function () {
     			t2 = text(/*pluginname*/ ctx[6]);
     			t3 = space();
     			h5 = element("h5");
-    			h5.textContent = "Edit Fast";
+    			h5.textContent = "Edit Workspace";
     			t5 = space();
     			hr = element("hr");
     			set_style(h1, "text-align", "center");
@@ -23023,7 +23023,7 @@ var app = (function () {
     			add_location(h2, file$b, 73, 10, 2083);
     			set_style(h5, "text-align", "center");
     			add_location(h5, file$b, 74, 10, 2141);
-    			add_location(hr, file$b, 75, 10, 2196);
+    			add_location(hr, file$b, 75, 10, 2201);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -23213,8 +23213,8 @@ var app = (function () {
     			br = element("br");
     			t2 = space();
     			create_component(colorpicker.$$.fragment);
-    			add_location(p, file$b, 84, 8, 2656);
-    			add_location(br, file$b, 85, 8, 2678);
+    			add_location(p, file$b, 84, 8, 2661);
+    			add_location(br, file$b, 85, 8, 2683);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23331,20 +23331,20 @@ var app = (function () {
     			br1 = element("br");
     			t8 = space();
     			create_component(dateinput.$$.fragment);
-    			add_location(p0, file$b, 92, 8, 2880);
-    			add_location(br0, file$b, 93, 8, 2902);
+    			add_location(p0, file$b, 92, 8, 2885);
+    			add_location(br0, file$b, 93, 8, 2907);
     			attr_dev(h2, "class", "svelte-11f4d6x");
-    			add_location(h2, file$b, 94, 8, 2915);
+    			add_location(h2, file$b, 94, 8, 2920);
     			attr_dev(div0, "class", "column svelte-11f4d6x");
     			set_style(div0, "width", "40%");
-    			add_location(div0, file$b, 91, 10, 2833);
-    			add_location(p1, file$b, 97, 8, 3043);
-    			add_location(br1, file$b, 98, 8, 3070);
+    			add_location(div0, file$b, 91, 10, 2838);
+    			add_location(p1, file$b, 97, 8, 3048);
+    			add_location(br1, file$b, 98, 8, 3075);
     			attr_dev(div1, "class", "column svelte-11f4d6x");
     			set_style(div1, "width", "60%");
-    			add_location(div1, file$b, 96, 8, 2996);
+    			add_location(div1, file$b, 96, 8, 3001);
     			attr_dev(div2, "class", "row svelte-11f4d6x");
-    			add_location(div2, file$b, 90, 6, 2805);
+    			add_location(div2, file$b, 90, 6, 2810);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -23491,21 +23491,21 @@ var app = (function () {
     			t7 = space();
     			span = element("span");
     			create_component(play.$$.fragment);
-    			add_location(p, file$b, 105, 8, 3234);
-    			add_location(br0, file$b, 106, 8, 3288);
+    			add_location(p, file$b, 105, 8, 3239);
+    			add_location(br0, file$b, 106, 8, 3293);
     			attr_dev(div0, "class", "column svelte-11f4d6x");
     			set_style(div0, "width", "40%");
-    			add_location(div0, file$b, 109, 10, 3340);
+    			add_location(div0, file$b, 109, 10, 3345);
     			attr_dev(div1, "class", "column svelte-11f4d6x");
     			set_style(div1, "width", "40%");
-    			add_location(div1, file$b, 111, 11, 3501);
-    			add_location(br1, file$b, 114, 14, 3714);
-    			add_location(span, file$b, 115, 14, 3733);
+    			add_location(div1, file$b, 111, 11, 3506);
+    			add_location(br1, file$b, 114, 14, 3719);
+    			add_location(span, file$b, 115, 14, 3738);
     			attr_dev(div2, "class", "column svelte-11f4d6x");
     			set_style(div2, "width", "20%");
-    			add_location(div2, file$b, 113, 12, 3660);
+    			add_location(div2, file$b, 113, 12, 3665);
     			attr_dev(div3, "class", "row svelte-11f4d6x");
-    			add_location(div3, file$b, 107, 8, 3301);
+    			add_location(div3, file$b, 107, 8, 3306);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23648,9 +23648,9 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t1 = space();
     			br1 = element("br");
-    			add_location(br0, file$b, 124, 14, 3960);
-    			add_location(span, file$b, 125, 15, 3980);
-    			add_location(br1, file$b, 126, 15, 4106);
+    			add_location(br0, file$b, 124, 14, 3965);
+    			add_location(span, file$b, 125, 15, 3985);
+    			add_location(br1, file$b, 126, 15, 4111);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -23757,9 +23757,9 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t1 = space();
     			br1 = element("br");
-    			add_location(br0, file$b, 129, 12, 4160);
-    			add_location(span, file$b, 130, 13, 4178);
-    			add_location(br1, file$b, 131, 13, 4316);
+    			add_location(br0, file$b, 129, 12, 4165);
+    			add_location(span, file$b, 130, 13, 4183);
+    			add_location(br1, file$b, 131, 13, 4321);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br0, anchor);
@@ -24043,11 +24043,11 @@ var app = (function () {
     			br4 = element("br");
     			t11 = space();
     			create_component(row.$$.fragment);
-    			add_location(br0, file$b, 82, 8, 2628);
-    			add_location(br1, file$b, 88, 8, 2779);
-    			add_location(br2, file$b, 103, 6, 3208);
-    			add_location(br3, file$b, 120, 8, 3895);
-    			add_location(br4, file$b, 121, 8, 3908);
+    			add_location(br0, file$b, 82, 8, 2633);
+    			add_location(br1, file$b, 88, 8, 2784);
+    			add_location(br2, file$b, 103, 6, 3213);
+    			add_location(br3, file$b, 120, 8, 3900);
+    			add_location(br4, file$b, 121, 8, 3913);
     		},
     		m: function mount(target, anchor) {
     			mount_component(grid, target, anchor);
@@ -29772,7 +29772,7 @@ var app = (function () {
     			Object.assign(Object.assign({}, undefined), {
     				kind: 'category',
     				name: parent,
-    				colour: 'E77761',
+    				colour: '0AB3F5',
     				contents: [
     					Object.assign(Object.assign({}, undefined), {
     						kind: 'block',
@@ -33508,7 +33508,7 @@ var app = (function () {
       ],
       "inputsInline": false,
       "output": null,
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
     }]);
@@ -33596,7 +33596,7 @@ var app = (function () {
           "name": "script"
         }
       ],
-      "colour": 'f96e5b',
+      "colour": '0070C0',
       "tooltip": "",
       "helpUrl": ""
     }]);
@@ -33654,7 +33654,7 @@ var app = (function () {
       "inputsInline": true,
       "previousStatement": null,
       "nextStatement": null,
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
       }]);
@@ -33715,7 +33715,7 @@ var app = (function () {
           }
         ],
         "output": "Statistics",
-        "colour": 'E77761',
+        "colour": '0AB3F5',
         "tooltip": "",
         "helpUrl": ""
       }]);
@@ -33779,7 +33779,7 @@ var app = (function () {
           }
         ],
         "output": "Period",
-        "colour": 'E77761',
+        "colour": '0AB3F5',
         "tooltip": "",
         "helpUrl": ""
       }]);
@@ -33831,7 +33831,7 @@ var app = (function () {
           }
         ],
         "output": "Day",
-        "colour": 'E77761',
+        "colour": '0AB3F5',
         "tooltip": "",
         "helpUrl": ""
       }]);
@@ -33869,7 +33869,7 @@ var app = (function () {
         ],
         "inputsInline": false,
         "output": "Tracker",
-        "colour": 'E77761',
+        "colour": '0AB3F5',
         "tooltip": "",
         "helpUrl": ""
       
@@ -33917,7 +33917,7 @@ var app = (function () {
         ],
         "inputsInline": false,
         "output": "Day",
-        "colour": 'E77761',
+        "colour": '0AB3F5',
         "tooltip": "",
         "helpUrl": ""
       }]);
@@ -33961,7 +33961,7 @@ var app = (function () {
       "inputsInline": true,
       "previousStatement": null,
       "nextStatement": null,
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
       }]);
@@ -34004,7 +34004,7 @@ var app = (function () {
       "inputsInline": true,
       "previousStatement": null,
       "nextStatement": null,
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
       }]);
@@ -34246,7 +34246,7 @@ var app = (function () {
       ],
       "inputsInline": false,
       "output": null,
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
     }]);
@@ -34318,7 +34318,7 @@ var app = (function () {
         }
       ],
       "output": "Number",
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
     }]);
@@ -34389,7 +34389,7 @@ var app = (function () {
         }
       ],
       "output": "Number",
-      "colour": 'E77761',
+      "colour": '0AB3F5',
       "tooltip": "",
       "helpUrl": ""
     }]);
@@ -34468,7 +34468,7 @@ var app = (function () {
         ],
         "inputsInline": true,
         "output": "attribute",
-        "colour": 'E77761',
+        "colour": '0AB3F5',
         "tooltip": "",
         "helpUrl": ""
       }]);
@@ -34529,7 +34529,7 @@ var app = (function () {
       }],
       "previousStatement": null,
       "nextStatement": null,
-      "colour": "f96e5b"
+      "colour": "86D8F9"
     }]);
 
     /**
@@ -34584,7 +34584,7 @@ var app = (function () {
     	// Add an API function for the alert() block, generated for "text_print" blocks.
     	var wrapper = function (text) {
     		text = text ? text.toString() : '';
-    		ExecuterConsole.update(value => value = value + '\n' + text);
+    		SingleExecuterConsole.update(value => value = value + '\n' + text);
     	}; //SingleExecuterConsole.update(value => value = value + '\n' + text);
 
     	interpreter.setProperty(globalObject, 'alert', interpreter.createNativeFunction(wrapper));
@@ -34887,22 +34887,22 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
-    	child_ctx[18] = i;
+    	child_ctx[14] = list[i];
+    	child_ctx[16] = i;
     	return child_ctx;
     }
 
-    // (64:4) {#if id === cur}
+    // (62:4) {#if id === cur}
     function create_if_block$1(ctx) {
     	let div;
     	let table;
     	let tr0;
-    	let t0_value = /*slide*/ ctx[16].content + "";
+    	let t0_value = /*slide*/ ctx[14].content + "";
     	let t0;
     	let t1;
     	let tr1;
     	let h4;
-    	let t2_value = /*slide*/ ctx[16].sub + "";
+    	let t2_value = /*slide*/ ctx[14].sub + "";
     	let t2;
     	let div_intro;
     	let div_outro;
@@ -34918,15 +34918,15 @@ var app = (function () {
     			tr1 = element("tr");
     			h4 = element("h4");
     			t2 = text(t2_value);
-    			add_location(tr0, file$1, 71, 10, 1742);
-    			add_location(h4, file$1, 72, 9, 1776);
-    			add_location(tr1, file$1, 72, 5, 1772);
+    			add_location(tr0, file$1, 69, 10, 1705);
+    			add_location(h4, file$1, 70, 9, 1739);
+    			add_location(tr1, file$1, 70, 5, 1735);
     			attr_dev(table, "class", "svelte-18jklul");
-    			add_location(table, file$1, 70, 8, 1724);
-    			set_style(div, "background", /*slide*/ ctx[16].bg);
+    			add_location(table, file$1, 68, 8, 1687);
+    			set_style(div, "background", /*slide*/ ctx[14].bg);
     			set_style(div, "border-radius", "10px");
     			attr_dev(div, "class", "slide svelte-18jklul");
-    			add_location(div, file$1, 64, 4, 1556);
+    			add_location(div, file$1, 62, 4, 1519);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -34968,18 +34968,18 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(64:4) {#if id === cur}",
+    		source: "(62:4) {#if id === cur}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (63:3) {#each slides as slide, id}
+    // (61:3) {#each slides as slide, id}
     function create_each_block(ctx) {
     	let if_block_anchor;
     	let current;
-    	let if_block = /*id*/ ctx[18] === /*cur*/ ctx[0] && create_if_block$1(ctx);
+    	let if_block = /*id*/ ctx[16] === /*cur*/ ctx[0] && create_if_block$1(ctx);
 
     	const block = {
     		c: function create() {
@@ -34992,7 +34992,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (/*id*/ ctx[18] === /*cur*/ ctx[0]) {
+    			if (/*id*/ ctx[16] === /*cur*/ ctx[0]) {
     				if (if_block) {
     					if_block.p(ctx, dirty);
 
@@ -35034,7 +35034,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(63:3) {#each slides as slide, id}",
+    		source: "(61:3) {#each slides as slide, id}",
     		ctx
     	});
 
@@ -35083,17 +35083,17 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = ">";
     			attr_dev(button0, "class", "svelte-18jklul");
-    			add_location(button0, file$1, 80, 4, 1901);
+    			add_location(button0, file$1, 78, 4, 1864);
     			attr_dev(button1, "class", "svelte-18jklul");
-    			add_location(button1, file$1, 83, 4, 1962);
+    			add_location(button1, file$1, 81, 4, 1925);
     			attr_dev(div0, "class", "controls svelte-18jklul");
-    			add_location(div0, file$1, 79, 3, 1874);
+    			add_location(div0, file$1, 77, 3, 1837);
     			attr_dev(div1, "class", "inner-wrapper svelte-18jklul");
-    			add_location(div1, file$1, 61, 2, 1472);
+    			add_location(div1, file$1, 59, 2, 1435);
     			attr_dev(div2, "class", "outer-wrapper svelte-18jklul");
-    			add_location(div2, file$1, 60, 1, 1442);
+    			add_location(div2, file$1, 58, 1, 1405);
     			attr_dev(div3, "class", "extra-outer-wrapper svelte-18jklul");
-    			add_location(div3, file$1, 59, 0, 1407);
+    			add_location(div3, file$1, 57, 0, 1370);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -35117,8 +35117,8 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(window, "keyup", /*handleShortcut*/ ctx[5], false, false, false),
-    					listen_dev(button0, "click", /*click_handler*/ ctx[10], false, false, false),
-    					listen_dev(button1, "click", /*click_handler_1*/ ctx[11], false, false, false)
+    					listen_dev(button0, "click", /*click_handler*/ ctx[8], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_1*/ ctx[9], false, false, false)
     				];
 
     				mounted = true;
@@ -35196,8 +35196,6 @@ var app = (function () {
     function instance$1($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Widget', slots, []);
-    	let { pluginname } = $$props;
-    	let { pluginemoji } = $$props;
     	let { workspaces } = $$props;
     	let { lastcentralschedule = "01-01-1999" } = $$props;
     	var countschedule = 0;
@@ -35209,7 +35207,7 @@ var app = (function () {
     	});
 
     	//let lastrun = new Date(lastcentralschedule).toISOString.slice(0, 10);
-    	let lastrun = new Date(lastcentralschedule);
+    	let lastrun = new Date(lastcentralschedule).toISOString();
 
     	let slides = [
     		{
@@ -35256,7 +35254,7 @@ var app = (function () {
     		}
     	}
 
-    	const writable_props = ['pluginname', 'pluginemoji', 'workspaces', 'lastcentralschedule'];
+    	const writable_props = ['workspaces', 'lastcentralschedule'];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<Widget> was created with unknown prop '${key}'`);
@@ -35266,16 +35264,12 @@ var app = (function () {
     	const click_handler_1 = () => next();
 
     	$$self.$$set = $$props => {
-    		if ('pluginname' in $$props) $$invalidate(6, pluginname = $$props.pluginname);
-    		if ('pluginemoji' in $$props) $$invalidate(7, pluginemoji = $$props.pluginemoji);
-    		if ('workspaces' in $$props) $$invalidate(8, workspaces = $$props.workspaces);
-    		if ('lastcentralschedule' in $$props) $$invalidate(9, lastcentralschedule = $$props.lastcentralschedule);
+    		if ('workspaces' in $$props) $$invalidate(6, workspaces = $$props.workspaces);
+    		if ('lastcentralschedule' in $$props) $$invalidate(7, lastcentralschedule = $$props.lastcentralschedule);
     	};
 
     	$$self.$capture_state = () => ({
     		hslide,
-    		pluginname,
-    		pluginemoji,
     		workspaces,
     		lastcentralschedule,
     		countschedule,
@@ -35293,10 +35287,8 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('pluginname' in $$props) $$invalidate(6, pluginname = $$props.pluginname);
-    		if ('pluginemoji' in $$props) $$invalidate(7, pluginemoji = $$props.pluginemoji);
-    		if ('workspaces' in $$props) $$invalidate(8, workspaces = $$props.workspaces);
-    		if ('lastcentralschedule' in $$props) $$invalidate(9, lastcentralschedule = $$props.lastcentralschedule);
+    		if ('workspaces' in $$props) $$invalidate(6, workspaces = $$props.workspaces);
+    		if ('lastcentralschedule' in $$props) $$invalidate(7, lastcentralschedule = $$props.lastcentralschedule);
     		if ('countschedule' in $$props) countschedule = $$props.countschedule;
     		if ('lastrun' in $$props) lastrun = $$props.lastrun;
     		if ('slides' in $$props) $$invalidate(1, slides = $$props.slides);
@@ -35314,8 +35306,6 @@ var app = (function () {
     		prev,
     		next,
     		handleShortcut,
-    		pluginname,
-    		pluginemoji,
     		workspaces,
     		lastcentralschedule,
     		click_handler,
@@ -35326,13 +35316,7 @@ var app = (function () {
     class Widget extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, {
-    			pluginname: 6,
-    			pluginemoji: 7,
-    			workspaces: 8,
-    			lastcentralschedule: 9
-    		});
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { workspaces: 6, lastcentralschedule: 7 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -35344,33 +35328,9 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*pluginname*/ ctx[6] === undefined && !('pluginname' in props)) {
-    			console.warn("<Widget> was created without expected prop 'pluginname'");
-    		}
-
-    		if (/*pluginemoji*/ ctx[7] === undefined && !('pluginemoji' in props)) {
-    			console.warn("<Widget> was created without expected prop 'pluginemoji'");
-    		}
-
-    		if (/*workspaces*/ ctx[8] === undefined && !('workspaces' in props)) {
+    		if (/*workspaces*/ ctx[6] === undefined && !('workspaces' in props)) {
     			console.warn("<Widget> was created without expected prop 'workspaces'");
     		}
-    	}
-
-    	get pluginname() {
-    		throw new Error("<Widget>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set pluginname(value) {
-    		throw new Error("<Widget>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	get pluginemoji() {
-    		throw new Error("<Widget>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set pluginemoji(value) {
-    		throw new Error("<Widget>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
     	get workspaces() {
@@ -35395,7 +35355,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (746:19) 
+    // (742:19) 
     function create_if_block_10(ctx) {
     	let h1;
     	let t1;
@@ -35421,12 +35381,12 @@ var app = (function () {
     			t6 = space();
     			hr = element("hr");
     			set_style(h1, "text-align", "center");
-    			add_location(h1, file, 746, 8, 29210);
+    			add_location(h1, file, 742, 8, 29188);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file, 747, 8, 29267);
+    			add_location(h2, file, 743, 8, 29245);
     			set_style(h5, "text-align", "center");
-    			add_location(h5, file, 748, 8, 29323);
-    			add_location(hr, file, 749, 8, 29396);
+    			add_location(h5, file, 744, 8, 29301);
+    			add_location(hr, file, 745, 8, 29374);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -35459,14 +35419,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(746:19) ",
+    		source: "(742:19) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (714:0) {#if mode == "modal"  || mode =="widget"}
+    // (710:0) {#if mode == "modal"  || mode =="widget"}
     function create_if_block_1(ctx) {
     	let theme_1;
     	let updating_theme;
@@ -35475,7 +35435,7 @@ var app = (function () {
     	let current;
 
     	function theme_1_theme_binding(value) {
-    		/*theme_1_theme_binding*/ ctx[44](value);
+    		/*theme_1_theme_binding*/ ctx[43](value);
     	}
 
     	let theme_1_props = {};
@@ -35559,14 +35519,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(714:0) {#if mode == \\\"modal\\\"  || mode ==\\\"widget\\\"}",
+    		source: "(710:0) {#if mode == \\\"modal\\\"  || mode ==\\\"widget\\\"}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (716:0) {#if inNomie}
+    // (712:0) {#if inNomie}
     function create_if_block_2(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -35656,14 +35616,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(716:0) {#if inNomie}",
+    		source: "(712:0) {#if inNomie}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (741:27) 
+    // (737:27) 
     function create_if_block_9(ctx) {
     	let widget;
     	let current;
@@ -35710,14 +35670,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(741:27) ",
+    		source: "(737:27) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (717:0) {#if mode == "modal"}
+    // (713:0) {#if mode == "modal"}
     function create_if_block_3(ctx) {
     	let header;
     	let t;
@@ -35786,7 +35746,7 @@ var app = (function () {
     			const header_changes = {};
     			if (dirty[0] & /*parent*/ 1) header_changes.company = /*parent*/ ctx[0];
 
-    			if (dirty[2] & /*$$scope*/ 536870912) {
+    			if (dirty[2] & /*$$scope*/ 268435456) {
     				header_changes.$$scope = { dirty, ctx };
     			}
 
@@ -35853,14 +35813,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(717:0) {#if mode == \\\"modal\\\"}",
+    		source: "(713:0) {#if mode == \\\"modal\\\"}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (722:2) <HeaderUtilities>
+    // (718:2) <HeaderUtilities>
     function create_default_slot_1(ctx) {
     	let headerglobalaction0;
     	let t0;
@@ -35936,14 +35896,14 @@ var app = (function () {
     		block: block_1,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(722:2) <HeaderUtilities>",
+    		source: "(718:2) <HeaderUtilities>",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (718:0) <Header company={parent} platformName={pluginname} on:click={showMain}>
+    // (714:0) <Header company={parent} platformName={pluginname} on:click={showMain}>
     function create_default_slot(ctx) {
     	let headerutilities;
     	let current;
@@ -35967,7 +35927,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const headerutilities_changes = {};
 
-    			if (dirty[2] & /*$$scope*/ 536870912) {
+    			if (dirty[2] & /*$$scope*/ 268435456) {
     				headerutilities_changes.$$scope = { dirty, ctx };
     			}
 
@@ -35991,14 +35951,14 @@ var app = (function () {
     		block: block_1,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(718:0) <Header company={parent} platformName={pluginname} on:click={showMain}>",
+    		source: "(714:0) <Header company={parent} platformName={pluginname} on:click={showMain}>",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (719:2) <svelte:fragment slot="skip-to-content">
+    // (715:2) <svelte:fragment slot="skip-to-content">
     function create_skip_to_content_slot(ctx) {
     	let skiptocontent;
     	let current;
@@ -36030,14 +35990,14 @@ var app = (function () {
     		block: block_1,
     		id: create_skip_to_content_slot.name,
     		type: "slot",
-    		source: "(719:2) <svelte:fragment slot=\\\"skip-to-content\\\">",
+    		source: "(715:2) <svelte:fragment slot=\\\"skip-to-content\\\">",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (737:30) 
+    // (733:30) 
     function create_if_block_8(ctx) {
     	let workspace;
     	let updating_consoleoutput;
@@ -36057,72 +36017,72 @@ var app = (function () {
     	let current;
 
     	function workspace_consoleoutput_binding(value) {
-    		/*workspace_consoleoutput_binding*/ ctx[62](value);
+    		/*workspace_consoleoutput_binding*/ ctx[61](value);
     	}
 
     	function workspace_activeworkspace_binding(value) {
-    		/*workspace_activeworkspace_binding*/ ctx[63](value);
+    		/*workspace_activeworkspace_binding*/ ctx[62](value);
     	}
 
     	function workspace_activetransformation_binding(value) {
-    		/*workspace_activetransformation_binding*/ ctx[64](value);
+    		/*workspace_activetransformation_binding*/ ctx[63](value);
     	}
 
     	function workspace_code_binding(value) {
-    		/*workspace_code_binding*/ ctx[65](value);
+    		/*workspace_code_binding*/ ctx[64](value);
     	}
 
     	function workspace_wsemoji_binding(value) {
-    		/*workspace_wsemoji_binding*/ ctx[66](value);
+    		/*workspace_wsemoji_binding*/ ctx[65](value);
     	}
 
     	function workspace_wsname_binding(value) {
-    		/*workspace_wsname_binding*/ ctx[67](value);
+    		/*workspace_wsname_binding*/ ctx[66](value);
     	}
 
     	function workspace_wsid_binding(value) {
-    		/*workspace_wsid_binding*/ ctx[68](value);
+    		/*workspace_wsid_binding*/ ctx[67](value);
     	}
 
     	function workspace_wsdisplayname_binding(value) {
-    		/*workspace_wsdisplayname_binding*/ ctx[69](value);
+    		/*workspace_wsdisplayname_binding*/ ctx[68](value);
     	}
 
     	function workspace_wsdescription_binding(value) {
-    		/*workspace_wsdescription_binding*/ ctx[70](value);
+    		/*workspace_wsdescription_binding*/ ctx[69](value);
     	}
 
     	function workspace_wscolor_binding(value) {
-    		/*workspace_wscolor_binding*/ ctx[71](value);
+    		/*workspace_wscolor_binding*/ ctx[70](value);
     	}
 
     	function workspace_wsactive_binding(value) {
-    		/*workspace_wsactive_binding*/ ctx[72](value);
+    		/*workspace_wsactive_binding*/ ctx[71](value);
     	}
 
     	function workspace_wsblock_binding(value) {
-    		/*workspace_wsblock_binding*/ ctx[73](value);
+    		/*workspace_wsblock_binding*/ ctx[72](value);
     	}
 
     	function workspace_wsltestrun_binding(value) {
-    		/*workspace_wsltestrun_binding*/ ctx[74](value);
+    		/*workspace_wsltestrun_binding*/ ctx[73](value);
     	}
 
     	function workspace_wsschedule_binding(value) {
-    		/*workspace_wsschedule_binding*/ ctx[75](value);
+    		/*workspace_wsschedule_binding*/ ctx[74](value);
     	}
 
     	let workspace_props = {
     		parent: /*parent*/ ctx[0],
-    		plugin: /*plugin*/ ctx[20],
+    		plugin: /*plugin*/ ctx[24],
     		pluginname,
     		pluginemoji,
-    		background: /*plugin*/ ctx[20].prefs.theme,
+    		background: /*plugin*/ ctx[24].prefs.theme,
     		buttonpushed: true
     	};
 
-    	if (/*consoleoutput*/ ctx[23] !== void 0) {
-    		workspace_props.consoleoutput = /*consoleoutput*/ ctx[23];
+    	if (/*consoleoutput*/ ctx[22] !== void 0) {
+    		workspace_props.consoleoutput = /*consoleoutput*/ ctx[22];
     	}
 
     	if (/*workspaceBlocks*/ ctx[15] !== void 0) {
@@ -36193,7 +36153,7 @@ var app = (function () {
     	binding_callbacks.push(() => bind(workspace, 'wsltestrun', workspace_wsltestrun_binding));
     	binding_callbacks.push(() => bind(workspace, 'wsschedule', workspace_wsschedule_binding));
     	workspace.$on("saveactualworkspace", /*saveActualWorkspace*/ ctx[38]);
-    	workspace.$on("executecode", /*executecode_handler*/ ctx[76]);
+    	workspace.$on("executecode", /*executecode_handler*/ ctx[75]);
 
     	const block_1 = {
     		c: function create() {
@@ -36206,12 +36166,10 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const workspace_changes = {};
     			if (dirty[0] & /*parent*/ 1) workspace_changes.parent = /*parent*/ ctx[0];
-    			if (dirty[0] & /*plugin*/ 1048576) workspace_changes.plugin = /*plugin*/ ctx[20];
-    			if (dirty[0] & /*plugin*/ 1048576) workspace_changes.background = /*plugin*/ ctx[20].prefs.theme;
 
-    			if (!updating_consoleoutput && dirty[0] & /*consoleoutput*/ 8388608) {
+    			if (!updating_consoleoutput && dirty[0] & /*consoleoutput*/ 4194304) {
     				updating_consoleoutput = true;
-    				workspace_changes.consoleoutput = /*consoleoutput*/ ctx[23];
+    				workspace_changes.consoleoutput = /*consoleoutput*/ ctx[22];
     				add_flush_callback(() => updating_consoleoutput = false);
     			}
 
@@ -36313,14 +36271,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(737:30) ",
+    		source: "(733:30) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (735:29) 
+    // (731:29) 
     function create_if_block_7(ctx) {
     	let edit;
     	let updating_theme;
@@ -36333,31 +36291,31 @@ var app = (function () {
     	let current;
 
     	function edit_theme_binding(value) {
-    		/*edit_theme_binding*/ ctx[53](value);
+    		/*edit_theme_binding*/ ctx[52](value);
     	}
 
     	function edit_latestrun_binding(value) {
-    		/*edit_latestrun_binding*/ ctx[54](value);
+    		/*edit_latestrun_binding*/ ctx[53](value);
     	}
 
     	function edit_name_binding(value) {
-    		/*edit_name_binding*/ ctx[55](value);
+    		/*edit_name_binding*/ ctx[54](value);
     	}
 
     	function edit_displayName_binding(value) {
-    		/*edit_displayName_binding*/ ctx[56](value);
+    		/*edit_displayName_binding*/ ctx[55](value);
     	}
 
     	function edit_description_binding(value) {
-    		/*edit_description_binding*/ ctx[57](value);
+    		/*edit_description_binding*/ ctx[56](value);
     	}
 
     	function edit_color_binding(value) {
-    		/*edit_color_binding*/ ctx[58](value);
+    		/*edit_color_binding*/ ctx[57](value);
     	}
 
     	function edit_emoji_binding(value) {
-    		/*edit_emoji_binding*/ ctx[59](value);
+    		/*edit_emoji_binding*/ ctx[58](value);
     	}
 
     	let edit_props = { pluginname, pluginemoji };
@@ -36400,8 +36358,8 @@ var app = (function () {
     	binding_callbacks.push(() => bind(edit, 'emoji', edit_emoji_binding));
     	edit.$on("addnew", /*addworkspace*/ ctx[35]);
     	edit.$on("saveworkspace", /*addworkspace*/ ctx[35]);
-    	edit.$on("executesingleitteration", /*executesingleitteration_handler*/ ctx[60]);
-    	edit.$on("exitedit", /*exitedit_handler*/ ctx[61]);
+    	edit.$on("executesingleitteration", /*executesingleitteration_handler*/ ctx[59]);
+    	edit.$on("exitedit", /*exitedit_handler*/ ctx[60]);
 
     	const block_1 = {
     		c: function create() {
@@ -36476,14 +36434,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(735:29) ",
+    		source: "(731:29) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (733:29) 
+    // (729:29) 
     function create_if_block_6(ctx) {
     	let settings;
     	let updating_centralscheduleslist;
@@ -36492,15 +36450,15 @@ var app = (function () {
     	let current;
 
     	function settings_centralscheduleslist_binding(value) {
-    		/*settings_centralscheduleslist_binding*/ ctx[47](value);
+    		/*settings_centralscheduleslist_binding*/ ctx[46](value);
     	}
 
     	function settings_lastcentralschedule_binding(value) {
-    		/*settings_lastcentralschedule_binding*/ ctx[48](value);
+    		/*settings_lastcentralschedule_binding*/ ctx[47](value);
     	}
 
     	function settings_theme_binding(value) {
-    		/*settings_theme_binding*/ ctx[49](value);
+    		/*settings_theme_binding*/ ctx[48](value);
     	}
 
     	let settings_props = {
@@ -36527,9 +36485,9 @@ var app = (function () {
     	binding_callbacks.push(() => bind(settings, 'theme', settings_theme_binding));
     	settings.$on("exitsettings", /*showMain*/ ctx[26]);
     	settings.$on("savesettings", /*saveSettings*/ ctx[29]);
-    	settings.$on("startschedule", /*startschedule_handler_1*/ ctx[50]);
-    	settings.$on("import_add", /*import_add_handler*/ ctx[51]);
-    	settings.$on("import_replace", /*import_replace_handler*/ ctx[52]);
+    	settings.$on("startschedule", /*startschedule_handler_1*/ ctx[49]);
+    	settings.$on("import_add", /*import_add_handler*/ ctx[50]);
+    	settings.$on("import_replace", /*import_replace_handler*/ ctx[51]);
 
     	const block_1 = {
     		c: function create() {
@@ -36581,14 +36539,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(733:29) ",
+    		source: "(729:29) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (731:25) 
+    // (727:25) 
     function create_if_block_5(ctx) {
     	let info;
     	let current;
@@ -36635,14 +36593,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(731:25) ",
+    		source: "(727:25) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (729:0) {#if view == "main"}
+    // (725:0) {#if view == "main"}
     function create_if_block_4(ctx) {
     	let main;
     	let current;
@@ -36656,13 +36614,13 @@ var app = (function () {
     			$$inline: true
     		});
 
-    	main.$on("addnew", /*addnew_handler*/ ctx[45]);
+    	main.$on("addnew", /*addnew_handler*/ ctx[44]);
     	main.$on("addbytemplate", /*addByTemplate*/ ctx[37]);
     	main.$on("deleteworkspace", /*deleteworkspace*/ ctx[39]);
     	main.$on("showworkspaceinfo", /*showworkspaceinfo*/ ctx[40]);
     	main.$on("editworkspace", /*editMode*/ ctx[33]);
     	main.$on("gotoworkspace", /*gotoWorkspace*/ ctx[34]);
-    	main.$on("startschedule", /*startschedule_handler*/ ctx[46]);
+    	main.$on("startschedule", /*startschedule_handler*/ ctx[45]);
 
     	const block_1 = {
     		c: function create() {
@@ -36695,14 +36653,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(729:0) {#if view == \\\"main\\\"}",
+    		source: "(725:0) {#if view == \\\"main\\\"}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (752:0) {#if loading}
+    // (748:0) {#if loading}
     function create_if_block(ctx) {
     	let div;
     	let p;
@@ -36712,9 +36670,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Loading....";
-    			add_location(p, file, 753, 0, 29443);
+    			add_location(p, file, 749, 0, 29421);
     			attr_dev(div, "class", "startup");
-    			add_location(div, file, 752, 0, 29421);
+    			add_location(div, file, 748, 0, 29399);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -36729,7 +36687,7 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(752:0) {#if loading}",
+    		source: "(748:0) {#if loading}",
     		ctx
     	});
 
@@ -36749,11 +36707,11 @@ var app = (function () {
     	let current;
 
     	libloader = new LibLoadder({
-    			props: { url: /*PlugiAapiUrl*/ ctx[24] },
+    			props: { url: /*PlugiAapiUrl*/ ctx[23] },
     			$$inline: true
     		});
 
-    	libloader.$on("loaded", /*onLoaded*/ ctx[43]);
+    	libloader.$on("loaded", onLoaded);
     	const if_block_creators = [create_if_block_1, create_if_block_10];
     	const if_blocks = [];
 
@@ -36785,7 +36743,7 @@ var app = (function () {
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "file-input");
     			attr_dev(input, "accept", ".wsp");
-    			add_location(input, file, 757, 0, 29485);
+    			add_location(input, file, 753, 0, 29463);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -36894,8 +36852,13 @@ var app = (function () {
     	return block_1;
     }
 
-    const pluginname = "Blockly Plugin";
+    const pluginname = "Nomie Blockly";
     const pluginemoji = "🧱";
+
+    function onLoaded() {
+    	
+    } //  setTimeout(()=>{
+    //  if (plugin.prefs == undefined) {
 
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -36936,13 +36899,12 @@ var app = (function () {
     	let latestrun = new Date().toDateString();
     	let schedule = "";
     	let amountofcards = 0;
-    	let plugin;
     	let isEditMode = false;
     	let isAddMode = false;
     	let consoleoutput = "";
     	let PlugiAapiUrl = "https://plugins.nomie.app/v1/nomie-plugin.js";
 
-    	plugin = new NomiePlugin({
+    	const plugin = new NomiePlugin({
     			name: pluginname,
     			emoji: pluginemoji,
     			avatar: "data:image/jpeg;base64,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",
@@ -36955,7 +36917,7 @@ var app = (function () {
     		});
 
     	SingleExecuterConsole.subscribe(value => {
-    		$$invalidate(23, consoleoutput = value);
+    		$$invalidate(22, consoleoutput = value);
     	});
 
     	// BLOCKY PLUGIN VARIABLES DECLARATION END
@@ -37109,8 +37071,6 @@ var app = (function () {
     		});
 
     		plugin.onRegistered(async () => {
-    			$$invalidate(1, inNomie = true);
-    			$$invalidate(4, loading = false);
     			await plugin.storage.init();
 
     			$$invalidate(6, blockly = await plugin.storage.getItem('blockly') || {
@@ -37131,11 +37091,10 @@ var app = (function () {
 
     		setTimeout(
     			() => {
-    				if (loading) {
-    					$$invalidate(1, inNomie = false);
-    				}
+    				$$invalidate(1, inNomie = true);
+    				$$invalidate(4, loading = false);
     			},
-    			400
+    			700
     		);
     	}
 
@@ -37292,7 +37251,7 @@ var app = (function () {
     		$$invalidate(17, jscode = workspace.jscode);
     		$$invalidate(18, latestrun = workspace.latestrun);
     		$$invalidate(19, schedule = workspace.schedule);
-    		$$invalidate(21, isEditMode = true);
+    		$$invalidate(20, isEditMode = true);
     		console.log('workspace to edit', displayName);
     		$$invalidate(5, view = "mainedit");
     	};
@@ -37325,7 +37284,7 @@ var app = (function () {
     		$$invalidate(17, jscode = workspace.jscode);
     		$$invalidate(18, latestrun = workspace.latestrun);
     		$$invalidate(19, schedule = workspace.schedule);
-    		$$invalidate(21, isEditMode = true);
+    		$$invalidate(20, isEditMode = true);
     		console.log('workspace to load', displayName);
 
     		setTimeout(
@@ -37404,7 +37363,7 @@ var app = (function () {
     					$$invalidate(17, jscode = newws[0].jscode);
     					$$invalidate(18, latestrun = newws[0].latestrun);
     					$$invalidate(19, schedule = newws[0].schedule);
-    					$$invalidate(22, isAddMode = true);
+    					$$invalidate(21, isAddMode = true);
     					$$invalidate(5, view = "mainedit");
     					clearInterval(awaitresult);
     				}
@@ -37456,7 +37415,7 @@ var app = (function () {
     			//blockly.workspaces.push(workspace);
     			//plugin.storage.setItem('blockly', blockly);
     			//amountofcards = blockly.workspaces.length;
-    			$$invalidate(22, isAddMode = true);
+    			$$invalidate(21, isAddMode = true);
 
     			$$invalidate(5, view = "mainedit");
     		});
@@ -37531,7 +37490,7 @@ var app = (function () {
     		$$invalidate(17, jscode = "");
     		$$invalidate(18, latestrun = "");
     		$$invalidate(19, schedule = "");
-    		$$invalidate(21, isEditMode = false);
+    		$$invalidate(20, isEditMode = false);
     	};
 
     	const deleteworkspace = async event => {
@@ -37598,25 +37557,18 @@ var app = (function () {
     		}
     	}
 
-    	function onLoaded() {
-    		loaded = true;
-    		console.log("Loaded is true");
-
-    		if (!plugin) {
-    			$$invalidate(20, plugin = new NomiePlugin({
-    					name: pluginname,
-    					emoji: pluginemoji,
-    					avatar: "data:image/jpeg;base64,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",
-    					description: "Blockly Plugin for creating your own simple automations",
-    					uses: ['createNote', 'onLaunch', 'getLocation', 'searchNotes', 'onNote'],
-    					version: "0.9",
-    					addToCaptureMenu: true,
-    					addToMoreMenu: true,
-    					addToWidgets: true
-    				}));
-    		}
-    	}
-
+    	//    window.location.reload()}},2000);
+    	// plugin = new NomiePlugin({
+    	//       name: pluginname,
+    	//       emoji: pluginemoji,
+    	//       avatar: "data:image/jpeg;base64,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",
+    	//       description: "Blockly Plugin for creating your own simple automations",
+    	//       uses: ['createNote', 'onLaunch', 'getLocation', 'searchNotes', 'onNote'],
+    	//       version: "0.9",
+    	//      addToCaptureMenu: true,
+    	//        addToMoreMenu: true,
+    	//        addToWidgets: true,
+    	//    })
     	// FILE MANAGEMENT END
     	onMount(async () => {
     		loadInitParams();
@@ -37713,13 +37665,13 @@ var app = (function () {
 
     	const exitedit_handler = () => {
     		$$invalidate(5, view = "main");
-    		$$invalidate(21, isEditMode = false);
-    		$$invalidate(22, isAddMode = false);
+    		$$invalidate(20, isEditMode = false);
+    		$$invalidate(21, isAddMode = false);
     	};
 
     	function workspace_consoleoutput_binding(value) {
     		consoleoutput = value;
-    		$$invalidate(23, consoleoutput);
+    		$$invalidate(22, consoleoutput);
     	}
 
     	function workspace_activeworkspace_binding(value) {
@@ -37849,11 +37801,11 @@ var app = (function () {
     		latestrun,
     		schedule,
     		amountofcards,
-    		plugin,
     		isEditMode,
     		isAddMode,
     		consoleoutput,
     		PlugiAapiUrl,
+    		plugin,
     		setTrackableList,
     		loadInitParams,
     		toggleTheme,
@@ -37910,11 +37862,10 @@ var app = (function () {
     		if ('latestrun' in $$props) $$invalidate(18, latestrun = $$props.latestrun);
     		if ('schedule' in $$props) $$invalidate(19, schedule = $$props.schedule);
     		if ('amountofcards' in $$props) amountofcards = $$props.amountofcards;
-    		if ('plugin' in $$props) $$invalidate(20, plugin = $$props.plugin);
-    		if ('isEditMode' in $$props) $$invalidate(21, isEditMode = $$props.isEditMode);
-    		if ('isAddMode' in $$props) $$invalidate(22, isAddMode = $$props.isAddMode);
-    		if ('consoleoutput' in $$props) $$invalidate(23, consoleoutput = $$props.consoleoutput);
-    		if ('PlugiAapiUrl' in $$props) $$invalidate(24, PlugiAapiUrl = $$props.PlugiAapiUrl);
+    		if ('isEditMode' in $$props) $$invalidate(20, isEditMode = $$props.isEditMode);
+    		if ('isAddMode' in $$props) $$invalidate(21, isAddMode = $$props.isAddMode);
+    		if ('consoleoutput' in $$props) $$invalidate(22, consoleoutput = $$props.consoleoutput);
+    		if ('PlugiAapiUrl' in $$props) $$invalidate(23, PlugiAapiUrl = $$props.PlugiAapiUrl);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -37942,11 +37893,11 @@ var app = (function () {
     		jscode,
     		latestrun,
     		schedule,
-    		plugin,
     		isEditMode,
     		isAddMode,
     		consoleoutput,
     		PlugiAapiUrl,
+    		plugin,
     		toggleTheme,
     		showMain,
     		showInformation,
@@ -37965,7 +37916,6 @@ var app = (function () {
     		showworkspaceinfo,
     		importAdd,
     		importReplace,
-    		onLoaded,
     		theme_1_theme_binding,
     		addnew_handler,
     		startschedule_handler,

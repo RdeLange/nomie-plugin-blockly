@@ -41,7 +41,7 @@ import Interpreter from 'js-interpreter';
       "name": "script"
     }
   ],
-  "colour": 'f96e5b',
+  "colour": '0070C0',
   "tooltip": "",
   "helpUrl": ""
 }]);

@@ -25,7 +25,7 @@ import Interpreter from 'js-interpreter';
     ],
     "inputsInline": false,
     "output": "Day",
-    "colour": 'E77761',
+    "colour": '0AB3F5',
     "tooltip": "",
     "helpUrl": ""
   }]);

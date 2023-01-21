@@ -40,7 +40,7 @@ import { getValueLocal } from '../tools/localfunction.svelte';
     ],
     "inputsInline": true,
     "output": "attribute",
-    "colour": 'E77761',
+    "colour": '0AB3F5',
     "tooltip": "",
     "helpUrl": ""
   }]);

@@ -27,7 +27,7 @@ import Interpreter from 'js-interpreter';
   "inputsInline": true,
   "previousStatement": null,
   "nextStatement": null,
-  "colour": 'E77761',
+  "colour": '0AB3F5',
   "tooltip": "",
   "helpUrl": ""
   }]);

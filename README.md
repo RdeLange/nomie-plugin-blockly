@@ -46,7 +46,7 @@ The 🧱Nomie Blockly Plugin also includes a 'Scheduler' which will enable you t
 
 ## Blockly Example
 
-Using the blocks is really intuitive. Simply open a category and drag the desired code block to the **working areausing the mouse. The individual blocks can also be adjusted and combined with others. If a combination isn’t possible, the block will not snap into place and will also not be included in the source text.
+Using the blocks is really intuitive. Simply open a category and drag the desired code block to the WorksSpace. The individual blocks can also be adjusted and combined with others. If a combination isn’t possible, the block will not snap into place and will also not be included in the source text.
 Individual puzzle pieces or groups of associated blocks can easily be deleted from the working area again. In that case, the corresponding lines of code are removed in the source text.
 
 To create a capability which gets the current temperature and stores it in Nomie, you just have to drag and drop blocks as per below:

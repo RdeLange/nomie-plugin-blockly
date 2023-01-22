@@ -57,7 +57,6 @@ To create a capability which gets the current temperature and stores it in Nomie
 
 After launching the plugin you will be presented with an overview off all the workspaces you created. Initially no workspaces are shown as you did not create one:
 
-
 ![](assets/20230122_004204_image.png)
 
 Clicking the + button will give you the option to create a new Blockly workspace. You can either choose a predefined workspace (like the temperature example) or use the Kick Start for an empty workspace.
@@ -128,13 +127,11 @@ As you can see I also expanded the console and included a 'Push to console' bloc
 
 Once you have finsihed stacking your blocks and saved your workspace, you can execute the code with the 'arrow' button at the top right of the screen.
 
-
 ![](assets/20230121_235439_Screen-Recording-2023-01-21-at-23.52.27.gif)
 
 ## Edit Single Workspace Settings
 
 You can edit the settings of a Single Workspace by clicking the edit icon for the Workspace you would like to edit:
-
 
 ![](assets/20230122_005305_image.png)
 
@@ -154,7 +151,6 @@ Most of the options are obvious, I would like to highlight some specific options
 It is possible to execute a workspace by clicking a trackable. Let's take above example as our starting point. Remember we called the workspace 'Retrieve Statistics Example'.
 
 If we create a new tally trackable and use the 'more options' settings of the trackable to include the text: 'Run Blockly Workspace: Retrieve Statistics Example', our workspace will be execute each time the trackable is clicked. See below how it works:
-
 
 ![](assets/20230122_000836_Screen-Recording-2023-01-22-at-00.05.07.gif)
 
@@ -176,7 +172,6 @@ The 🧱Nomie Blockly Plugin has a couple of settings you can tune. You can go t
 
 Once clicked you will see below overview:
 
-
 ![](assets/20230122_002538_image.png)
 
 * Manually run Schedule: you can manually run the scheduler by choosing this option.
@@ -194,6 +189,5 @@ After installing the widget will provide you insight in:
 * The last time the scheduler has been executed
 * The amount of workspaces defined
 * The amount of workspaces part of the scheduler
-
 
 ![](assets/20230122_003733_Screen-Recording-2023-01-22-at-00.35.43.gif)

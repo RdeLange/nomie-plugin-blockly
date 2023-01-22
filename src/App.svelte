@@ -83,7 +83,7 @@
         version: "0.9",
         addToCaptureMenu: true,
         addToMoreMenu: true,
-        addToWidgets: true,
+        addToWidgets: false,
       })
       
     
@@ -282,13 +282,23 @@ return PreLoadedList;
 
 // ALL ON LAUNCH CODE START
 async function onLaunchStart() {
+  //validate last schedule run
   var diff = Math.abs(new Date().getTime() - new Date(blockly.lastcentralschedule).getTime()) / 3600000;
     if (diff > 24) {
       console.log("Last scheduled run is already "+diff+" hours ago, scheduler will be started")
       startSchedule();
     }
     else {console.log("Last scheduled run is just "+diff+" hours ago, scheduler will not be started")}
-  
+   
+    // and start an interval to validate every hour
+  setInterval(()=>{
+  var diff = Math.abs(new Date().getTime() - new Date(blockly.lastcentralschedule).getTime()) / 3600000;
+    if (diff > 24) {
+      console.log("Last scheduled run is already "+diff+" hours ago, scheduler will be started")
+      startSchedule();
+    }
+    else {console.log("Last scheduled run is just "+diff+" hours ago, scheduler will not be started")}
+  },3600000)
 }
 
 // ALL ON NOTE CODE START

@@ -35355,7 +35355,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (742:19) 
+    // (752:19) 
     function create_if_block_10(ctx) {
     	let h1;
     	let t1;
@@ -35381,12 +35381,12 @@ var app = (function () {
     			t6 = space();
     			hr = element("hr");
     			set_style(h1, "text-align", "center");
-    			add_location(h1, file, 742, 8, 29188);
+    			add_location(h1, file, 752, 8, 29661);
     			set_style(h2, "text-align", "center");
-    			add_location(h2, file, 743, 8, 29245);
+    			add_location(h2, file, 753, 8, 29718);
     			set_style(h5, "text-align", "center");
-    			add_location(h5, file, 744, 8, 29301);
-    			add_location(hr, file, 745, 8, 29374);
+    			add_location(h5, file, 754, 8, 29774);
+    			add_location(hr, file, 755, 8, 29847);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -35419,14 +35419,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_10.name,
     		type: "if",
-    		source: "(742:19) ",
+    		source: "(752:19) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (710:0) {#if mode == "modal"  || mode =="widget"}
+    // (720:0) {#if mode == "modal"  || mode =="widget"}
     function create_if_block_1(ctx) {
     	let theme_1;
     	let updating_theme;
@@ -35519,14 +35519,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(710:0) {#if mode == \\\"modal\\\"  || mode ==\\\"widget\\\"}",
+    		source: "(720:0) {#if mode == \\\"modal\\\"  || mode ==\\\"widget\\\"}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (712:0) {#if inNomie}
+    // (722:0) {#if inNomie}
     function create_if_block_2(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -35616,14 +35616,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(712:0) {#if inNomie}",
+    		source: "(722:0) {#if inNomie}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (737:27) 
+    // (747:27) 
     function create_if_block_9(ctx) {
     	let widget;
     	let current;
@@ -35670,14 +35670,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_9.name,
     		type: "if",
-    		source: "(737:27) ",
+    		source: "(747:27) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (713:0) {#if mode == "modal"}
+    // (723:0) {#if mode == "modal"}
     function create_if_block_3(ctx) {
     	let header;
     	let t;
@@ -35813,14 +35813,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(713:0) {#if mode == \\\"modal\\\"}",
+    		source: "(723:0) {#if mode == \\\"modal\\\"}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (718:2) <HeaderUtilities>
+    // (728:2) <HeaderUtilities>
     function create_default_slot_1(ctx) {
     	let headerglobalaction0;
     	let t0;
@@ -35896,14 +35896,14 @@ var app = (function () {
     		block: block_1,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(718:2) <HeaderUtilities>",
+    		source: "(728:2) <HeaderUtilities>",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (714:0) <Header company={parent} platformName={pluginname} on:click={showMain}>
+    // (724:0) <Header company={parent} platformName={pluginname} on:click={showMain}>
     function create_default_slot(ctx) {
     	let headerutilities;
     	let current;
@@ -35951,14 +35951,14 @@ var app = (function () {
     		block: block_1,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(714:0) <Header company={parent} platformName={pluginname} on:click={showMain}>",
+    		source: "(724:0) <Header company={parent} platformName={pluginname} on:click={showMain}>",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (715:2) <svelte:fragment slot="skip-to-content">
+    // (725:2) <svelte:fragment slot="skip-to-content">
     function create_skip_to_content_slot(ctx) {
     	let skiptocontent;
     	let current;
@@ -35990,14 +35990,14 @@ var app = (function () {
     		block: block_1,
     		id: create_skip_to_content_slot.name,
     		type: "slot",
-    		source: "(715:2) <svelte:fragment slot=\\\"skip-to-content\\\">",
+    		source: "(725:2) <svelte:fragment slot=\\\"skip-to-content\\\">",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (733:30) 
+    // (743:30) 
     function create_if_block_8(ctx) {
     	let workspace;
     	let updating_consoleoutput;
@@ -36271,14 +36271,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(733:30) ",
+    		source: "(743:30) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (731:29) 
+    // (741:29) 
     function create_if_block_7(ctx) {
     	let edit;
     	let updating_theme;
@@ -36434,14 +36434,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(731:29) ",
+    		source: "(741:29) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (729:29) 
+    // (739:29) 
     function create_if_block_6(ctx) {
     	let settings;
     	let updating_centralscheduleslist;
@@ -36539,14 +36539,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(729:29) ",
+    		source: "(739:29) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (727:25) 
+    // (737:25) 
     function create_if_block_5(ctx) {
     	let info;
     	let current;
@@ -36593,14 +36593,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(727:25) ",
+    		source: "(737:25) ",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (725:0) {#if view == "main"}
+    // (735:0) {#if view == "main"}
     function create_if_block_4(ctx) {
     	let main;
     	let current;
@@ -36653,14 +36653,14 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(725:0) {#if view == \\\"main\\\"}",
+    		source: "(735:0) {#if view == \\\"main\\\"}",
     		ctx
     	});
 
     	return block_1;
     }
 
-    // (748:0) {#if loading}
+    // (758:0) {#if loading}
     function create_if_block(ctx) {
     	let div;
     	let p;
@@ -36670,9 +36670,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Loading....";
-    			add_location(p, file, 749, 0, 29421);
+    			add_location(p, file, 759, 0, 29894);
     			attr_dev(div, "class", "startup");
-    			add_location(div, file, 748, 0, 29399);
+    			add_location(div, file, 758, 0, 29872);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -36687,7 +36687,7 @@ var app = (function () {
     		block: block_1,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(748:0) {#if loading}",
+    		source: "(758:0) {#if loading}",
     		ctx
     	});
 
@@ -36743,7 +36743,7 @@ var app = (function () {
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "file-input");
     			attr_dev(input, "accept", ".wsp");
-    			add_location(input, file, 753, 0, 29463);
+    			add_location(input, file, 763, 0, 29936);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -36913,7 +36913,7 @@ var app = (function () {
     			version: "0.9",
     			addToCaptureMenu: true,
     			addToMoreMenu: true,
-    			addToWidgets: true
+    			addToWidgets: false
     		});
 
     	SingleExecuterConsole.subscribe(value => {
@@ -37135,6 +37135,7 @@ var app = (function () {
 
     	// ALL ON LAUNCH CODE START
     	async function onLaunchStart() {
+    		//validate last schedule run
     		var diff = Math.abs(new Date().getTime() - new Date(blockly.lastcentralschedule).getTime()) / 3600000;
 
     		if (diff > 24) {
@@ -37143,6 +37144,21 @@ var app = (function () {
     		} else {
     			console.log("Last scheduled run is just " + diff + " hours ago, scheduler will not be started");
     		}
+
+    		// and start an interval to validate every hour
+    		setInterval(
+    			() => {
+    				var diff = Math.abs(new Date().getTime() - new Date(blockly.lastcentralschedule).getTime()) / 3600000;
+
+    				if (diff > 24) {
+    					console.log("Last scheduled run is already " + diff + " hours ago, scheduler will be started");
+    					startSchedule();
+    				} else {
+    					console.log("Last scheduled run is just " + diff + " hours ago, scheduler will not be started");
+    				}
+    			},
+    			3600000
+    		);
     	}
 
     	// ALL ON NOTE CODE START

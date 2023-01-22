@@ -83,7 +83,7 @@
         version: "0.9",
         addToCaptureMenu: true,
         addToMoreMenu: true,
-        addToWidgets: false,
+        addToWidgets: true,
       })
       
     

@@ -15,7 +15,7 @@ Blockly includes everything you need for defining and rendering blocks in a drag
 
 The url of the plugin is:
 
-[https://dailynomie.github.io/nomie-blockly-api/](https://dailynomie.github.io/nomie-blockly-api/)
+[https://dailynomie.github.io/nomie-plugin-blockly/](https://dailynomie.github.io/nomie-plugin-blockly/)
 
 The 🧱Nomie Blockly Plugin can be installed in Nomie via the following steps:
 

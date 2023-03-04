@@ -16,9 +16,9 @@
 	let lastrun = new Date(lastcentralschedule).toISOString();
 	
 	let slides = [
-		{ content: 'Last Schedule', sub: lastrun ,bg: '#E77761' },
-		{ content: 'Workspaces', sub: 'Total workspaces available: '+workspaces.length,bg: '#E77761' },
-		{ content: 'Workspaces', sub: 'Total workspaces scheduled: '+countschedule,bg: '#E77761' },
+		{ content: 'Last Schedule', sub: lastrun ,bg: '#08A1DD' },
+		{ content: 'Workspaces', sub: 'Total workspaces available: '+workspaces.length,bg: '#08A1DD' },
+		{ content: 'Workspaces', sub: 'Total workspaces scheduled: '+countschedule,bg: '#08A1DD' },
 	]
 	
 	let cur = 0;

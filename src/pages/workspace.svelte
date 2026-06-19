@@ -104,9 +104,9 @@
 		toolboxPosition: 'end',
         horizontalLayout: true,
 		move: {
-			scrollbars: false,
+			scrollbars: true,
 			drag: true,
-			wheel: false,
+			wheel: true,
 		},
 		zoom: {
 			controls: true,

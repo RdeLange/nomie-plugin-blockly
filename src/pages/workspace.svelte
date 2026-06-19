@@ -110,7 +110,7 @@
 		},
 		zoom: {
 			controls: true,
-			wheel: true,
+			wheel: false,
 			maxScale: 1.5,
 			minScale: 0.4,
 			scaleSpeed: 1.02,
